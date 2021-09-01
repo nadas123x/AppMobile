@@ -1,7 +1,7 @@
-import { createStackNavigator} from 'react-navigation-stack';
+import {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
-import Posts from './component/Posts';
-import SB from './component/StyledButton/SB';
+import Posts from '../UzinItem/Posts';
+import SB from '../StyledButton/SB';
 
 const screens={
     
