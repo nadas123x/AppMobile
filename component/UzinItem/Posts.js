@@ -36,7 +36,7 @@ export default class Posts extends Component {
         <FlatList style={styles.list}
           data={this.state.data}
           keyExtractor= {(item) => {
-            return item.id;
+            return item.id.toString();
           }}
           ItemSeparatorComponent={() => {
             return (
