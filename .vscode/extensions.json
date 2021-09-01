@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "xabikos.javascriptsnippets"
+        "xabikos.javascriptsnippets",
+        "equimper.react-native-react-redux"
     ]
 }
