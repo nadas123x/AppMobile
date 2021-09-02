@@ -17,15 +17,16 @@ export default class Posts extends Component {
     super(props);
     this.state = {
       data: [
-        {id:1, title: "Lorem ipsum dolor",                  time:"1 days a go",    image:"https://via.placeholder.com/400x200/FFB6C1/000000"},
-        {id:2, title: "Sit amet, consectetuer",             time:"2 minutes a go", image:"https://via.placeholder.com/400x200/48D1CC/000000"} ,
-        {id:3, title: "Dipiscing elit. Aenean ",            time:"3 hour a go",    image:"https://via.placeholder.com/400x200/AFEEEE/000000"}, 
-        {id:4, title: "Commodo ligula eget dolor.",         time:"4 months a go",  image:"https://via.placeholder.com/400x200/FFEFD5/000000"}, 
-        {id:5, title: "Aenean massa. Cum sociis",           time:"5 weeks a go",   image:"https://via.placeholder.com/400x200/FFC0CB/000000"}, 
-        {id:6, title: "Natoque penatibus et magnis",        time:"6 year a go",    image:"https://via.placeholder.com/400x200/DDA0DD/000000"}, 
-        {id:7, title: "Dis parturient montes, nascetur",    time:"7 minutes a go", image:"https://via.placeholder.com/400x200/B0E0E6/000000"}, 
-        {id:8, title: "Ridiculus mus. Donec quam",          time:"8 days a go",    image:"https://via.placeholder.com/400x200/87CEEB/000000"},
-        {id:9, title: "Felis, ultricies nec, pellentesque", time:"9 minutes a go", image:"https://via.placeholder.com/400x200/4682B4/000000"},
+        {id:1, title: "Actualités",   
+
+                         image:"http://fnh.ma//uploads/actualites/60a6683edaab0.jpg"},
+        {id:2, title: "A propos | OCP Group",           image:"https://www.infomediaire.net/wp-content/uploads/2017/06/Phosboucraa.jpg"} ,
+        {id:3, title: " ",             image:"https://s3.lebrief.ma/s3fs-public/styles/facebook/public/2020-08/ocp_jorf_lasfar.jpg?h=c673cd1c&itok=EMNpaaP1"}, 
+        {id:4, title: "",           image:"https://corpo.ocpgroup.ma/sites/default/files/styles/optimized/public/2019-03/20160309_AFC_JORF_92.jpg?itok=aPuXq3tB"}, 
+        {id:5, title: "",             image:"https://via.placeholder.com/400x200/FFC0CB/000000"}, 
+        {id:6, title: "",          image:"https://via.placeholder.com/400x200/DDA0DD/000000"}, 
+      
+      
       ]
     };
   }
@@ -53,31 +54,23 @@ export default class Posts extends Component {
                   <View style={styles.cardContent}>
                     <View>
                       <Text style={styles.title}>{item.title}</Text>
-                      <Text style={styles.time}>{item.time}</Text>
+                       <Text style={styles.time}>{item.time}</Text>
+
                     </View>
+                    
 
                     <View style={styles.cardFooter}>
                       <View style={styles.socialBarContainer}>
                         <View style={styles.socialBarSection}>
                           <TouchableOpacity style={styles.socialBarButton}>
-                            <Image style={styles.icon} source={{uri: 'https://img.icons8.com/color/70/000000/filled-like.png'}}/>
-                            <Text style={styles.socialBarLabel}>78</Text>
+                            <Image style={styles.icon} source={{uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA5bcu9QwfeEJG3qT-GmX7yyLDiOhxxpTdJEQpGLGVJ80GhB4T5_dRnsx-wE2TWvtAwUE&usqp=CAU'}}/>
+                            <Text style={styles.socialBarLabel}></Text>
                           </TouchableOpacity>
                         </View>
 
-                        <View style={styles.socialBarSection}>
-                          <TouchableOpacity style={styles.socialBarButton}>
-                            <Image style={styles.icon} source={{uri: 'https://img.icons8.com/ios-glyphs/75/ffffff/comments.png'}}/>
-                            <Text style={styles.socialBarLabel}>25</Text>
-                          </TouchableOpacity>
-                        </View>
+                        
 
-                        <View style={styles.socialBarSection}>
-                          <TouchableOpacity style={styles.socialBarButton}>
-                            <Image style={styles.icon} source={{uri: 'https://img.icons8.com/material/50/ffffff/retweet.png'}}/>
-                            <Text  style={styles.socialBarLabel}>13</Text>
-                          </TouchableOpacity>
-                        </View>
+                       
                       </View>
                     </View>
                   </View>
@@ -93,28 +86,27 @@ export default class Posts extends Component {
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    marginTop:20,
+    marginTop:0,
   },
   list: {
     backgroundColor:"#E6E6E6",
   },
   separator: {
-    marginTop: 1,
+    marginTop: 6,
   },
   /******** card **************/
   card:{
     margin: 0,
     borderRadius: 2,
-    borderWidth: 1,
-    borderColor: "#DCDCDC",
-    backgroundColor: "#DCDCDC",
+    borderWidth: 2,
+    borderColor: "olivedrab",
+    backgroundColor: "olivedrab",
   },
   cardHeader: {
-    paddingVertical: 17,
+    paddingVertical: 7,
     paddingHorizontal: 16,
     borderTopLeftRadius: 1,
     borderTopRightRadius: 1,
-    flexDirection: 'row',
     justifyContent: 'space-between',
   },
   cardContent: {
@@ -131,12 +123,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent'
   },
   cardFooter:{
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingTop: 15,
+    flexDirection: 'row-reverse',
+    paddingTop: 10,
     paddingBottom: 0,
-    paddingVertical: 7.5,
-    paddingHorizontal: 0
   },
   cardImage:{
     flex: 1,
@@ -146,40 +135,23 @@ const styles = StyleSheet.create({
   /******** card components **************/
   title:{
     fontSize:22,
-    color: "#ffffff",
-    marginTop: 10,
-    fontWeight:'bold'
-  },
-  time:{
-    fontSize:13,
-    color: "#ffffff",
-    marginTop: 5
-  },
+    color: "forestgreen",
+    marginTop: 20,
+    fontStyle:'italic',
+    textDecorationStyle :'dotted'
+    },
   icon: {
-    width:25,
-    height:25,
+    width:30,
+    height:30,
+
   },
   /******** social bar ******************/
   socialBarContainer: {
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    flexDirection: 'row',
-    flex: 1
+    
   },
-  socialBarSection: {
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    flex: 1,
-  },
-  socialBarlabel: {
-    marginLeft: 8,
-    alignSelf: 'flex-start',
-    justifyContent: 'center',
-    color: "#ffffff",
-  },
+ 
+  
   socialBarButton:{
-    flexDirection: 'row',
-    justifyContent: 'center',
     alignItems: 'center',
   }
 });  
