@@ -15,14 +15,15 @@ const screens={
     Posts:{
         screen: Posts
     },
+    Prrop:{
+        screen: Prrop
+    },
     
     News:{
         screen: News
 
     },
-    Prrops:{
-        screen: Prrops
-    },
+   
 
 
 }

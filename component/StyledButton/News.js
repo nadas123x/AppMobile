@@ -16,23 +16,20 @@ export default class Menu extends Component {
     super(props);
     this.state = {
       data: [
-        {id:1, title: "You",      color:"#FF4500", members:8,  image:"https://img.icons8.com/color/70/000000/name.png"},
-        {id:1, title: "Home",     color:"#87CEEB", members:6,  image:"https://img.icons8.com/office/70/000000/home-page.png"},
-        {id:2, title: "Love",     color:"#4682B4", members:12, image:"https://img.icons8.com/color/70/000000/two-hearts.png"} ,
-        {id:3, title: "Family",   color:"#6A5ACD", members:5,  image:"https://img.icons8.com/color/70/000000/family.png"} ,
-        {id:4, title: "Friends",  color:"#FF69B4", members:6,  image:"https://img.icons8.com/color/70/000000/groups.png"} ,
-        {id:5, title: "School",   color:"#00BFFF", members:7,  image:"https://img.icons8.com/color/70/000000/classroom.png"} ,
-        {id:6, title: "Things",   color:"#00FFFF", members:8,  image:"https://img.icons8.com/dusk/70/000000/checklist.png"} ,
-        {id:8, title: "World",    color:"#20B2AA", members:23, image:"https://img.icons8.com/dusk/70/000000/globe-earth.png"} ,
-        {id:9, title: "Remember", color:"#191970", members:45, image:"https://img.icons8.com/color/70/000000/to-do.png"} ,
-        {id:9, title: "Game",     color:"#008080", members:13, image:"https://img.icons8.com/color/70/000000/basketball.png"} ,
+        {id:1, title: "",      color:"greenforest",   image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"},
+        {id:1, title: "",     color:"#greenforest",  image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"},
+        {id:2, title: "",     color:"greenforest",  image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"} ,
+        {id:3, title: "",   color:"greenforest",   image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"} ,
+        {id:4, title: "",  color:"#greenforest",  image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"} ,
+        {id:5, title: "",   color:"#greenforest",   image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"} ,
+        {id:6, title: "",   color:"greenforest",  image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"} ,
+       
       ]
     };
   }
 
-  clickEventListener(item) {
-    Alert.Alert(item.title)
-  }
+  
+
 
   render() {
     return (
@@ -50,11 +47,11 @@ export default class Menu extends Component {
               <TouchableOpacity style={[styles.card, {backgroundColor:item.color}]} onPress={() => {this.clickEventListener(item.view)}}>
                 <View style={styles.cardHeader}>
                   <Text style={styles.title}>{item.title}</Text>
-                  <Image style={styles.icon} source={{uri:"https://img.icons8.com/ios/40/000000/settings.png"}}/>
+                  <Image style={styles.icon1} source={{uri:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"}}/>
                 </View>
                 <Image style={styles.cardImage} source={{uri:item.image}}/>
                 <View style={styles.cardFooter}>
-                  <Text style={styles.subTitle}>{item.members} members</Text>
+                  <Text style={styles.subTitle}>{item.members} actualité</Text>
                 </View>
               </TouchableOpacity>
             )
@@ -71,7 +68,7 @@ const styles = StyleSheet.create({
   },
   list: {
     //paddingHorizontal: 5,
-    backgroundColor:"#E6E6E6",
+    backgroundColor:"green",
   },
   listContainer:{
     alignItems:'center'

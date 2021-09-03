@@ -22,11 +22,11 @@ export default class Posts extends Component {
         {id:1, title: "Actualités",   
 
                          image:"http://fnh.ma//uploads/actualites/60a6683edaab0.jpg"},
-        {id:2, title: "A propos | OCP Group",           image:"https://www.infomediaire.net/wp-content/uploads/2017/06/Phosboucraa.jpg"} ,
+        {id:2, title: "",           image:"https://www.infomediaire.net/wp-content/uploads/2017/06/Phosboucraa.jpg"} ,
         {id:3, title: " ",             image:"https://s3.lebrief.ma/s3fs-public/styles/facebook/public/2020-08/ocp_jorf_lasfar.jpg?h=c673cd1c&itok=EMNpaaP1"}, 
         {id:4, title: "",           image:"https://corpo.ocpgroup.ma/sites/default/files/styles/optimized/public/2019-03/20160309_AFC_JORF_92.jpg?itok=aPuXq3tB"}, 
-        {id:5, title: "",             image:"https://via.placeholder.com/400x200/FFC0CB/000000"}, 
-        {id:6, title: "",          image:"https://via.placeholder.com/400x200/DDA0DD/000000"}, 
+        {id:5, title: "",             image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"}, 
+        {id:6, title: "",          image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"}, 
       
       
       ]
@@ -38,13 +38,13 @@ export default class Posts extends Component {
       this.props.navigation.navigate('News')
     }
     if(idMenu==2){
-      this.props.navigation.navigate('Prrops')
+      this.props.navigation.navigate('Prrop')
     }
     if(idMenu==3){
-      this.props.navigation.navigate('News')
+      this.props.navigation.navigate('SB')
     }
     if(idMenu==4){
-      this.props.navigation.navigate('News')
+      this.props.navigation.navigate('SB')
     }
     if(idMenu==5){
       this.props.navigation.navigate('News')
@@ -169,13 +169,5 @@ const styles = StyleSheet.create({
     height:30,
 
   },
-  /******** social bar ******************/
-  socialBarContainer: {
-    
-  },
  
-  
-  socialBarButton:{
-    alignItems: 'center',
-  }
 });  
