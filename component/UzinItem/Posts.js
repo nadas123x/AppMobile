@@ -13,6 +13,7 @@ import {
 
 export default class Posts extends Component {
 
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -30,11 +31,33 @@ export default class Posts extends Component {
       ]
     };
   }
-
+  handleMenu = (idMenu) => {
+    console.log("chka7   " + idMenu)
+    if(idMenu==1){
+      this.props.navigation.navigate('News')
+    }
+    if(idMenu==2){
+      this.props.navigation.navigate('News')
+    }
+    if(idMenu==3){
+      this.props.navigation.navigate('News')
+    }
+    if(idMenu==4){
+      this.props.navigation.navigate('News')
+    }
+    if(idMenu==5){
+      this.props.navigation.navigate('News')
+    }
+    if(idMenu==6){
+      this.props.navigation.navigate('News')
+    }
+    
+  }
   render() {
     return (
       <View style={styles.container}>
         <FlatList style={styles.list}
+          
           data={this.state.data}
           keyExtractor= {(item) => {
             return item.id.toString();
@@ -44,13 +67,13 @@ export default class Posts extends Component {
               <View style={styles.separator}/>
             )
           }}
-          renderItem={(post) => {
+          renderItem={(post) => { 
             const item = post.item;
             return (
-              <TouchableOpacity>
-                <View style={styles.card}>
+              <TouchableOpacity onPress={()=> this.handleMenu(item.id)}>
+                <View style={styles.card} >
 
-                  <Image style={styles.cardImage} source={{uri:item.image}}/>
+                  <Image style={styles.cardImage} source={{uri:item.image}} />
                   <View style={styles.cardContent}>
                     <View>
                       <Text style={styles.title}>{item.title}</Text>
@@ -62,7 +85,7 @@ export default class Posts extends Component {
                     <View style={styles.cardFooter}>
                       <View style={styles.socialBarContainer}>
                         <View style={styles.socialBarSection}>
-                          <TouchableOpacity style={styles.socialBarButton}>
+                          <TouchableOpacity style={styles.socialBarButton} >
                             <Image style={styles.icon} source={{uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA5bcu9QwfeEJG3qT-GmX7yyLDiOhxxpTdJEQpGLGVJ80GhB4T5_dRnsx-wE2TWvtAwUE&usqp=CAU'}}/>
                             <Text style={styles.socialBarLabel}></Text>
                           </TouchableOpacity>

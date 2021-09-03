@@ -2,6 +2,7 @@ import {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
 import Posts from '../UzinItem/Posts';
 import SB from '../StyledButton/SB';
+import News from '../StyledButton/News';
 
 const screens={
     
@@ -11,6 +12,9 @@ const screens={
 
     Posts:{
         screen: Posts
+    },
+    News:{
+        screen: News
     }
 }
 const Homestacker= createStackNavigator(screens);
