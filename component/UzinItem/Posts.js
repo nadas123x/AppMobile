@@ -11,6 +11,7 @@ import {
   Button
 } from 'react-native';
 
+
 export default class Posts extends Component {
 
   
@@ -37,7 +38,7 @@ export default class Posts extends Component {
       this.props.navigation.navigate('News')
     }
     if(idMenu==2){
-      this.props.navigation.navigate('News')
+      this.props.navigation.navigate('Prrops')
     }
     if(idMenu==3){
       this.props.navigation.navigate('News')
