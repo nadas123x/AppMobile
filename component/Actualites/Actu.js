@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import {React,useEffect} from 'react';
 import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 import News from  './component/StyledButton/News';
 
 
-export default function App() {
+export default function App({navigation}) {
+  
   const PressHandler = () => {
     navigation.navigate('News')
   }

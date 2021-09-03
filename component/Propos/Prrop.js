@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component,useEffect,useFocusEffect } from 'react';
+
 import Svg, { Ellipse } from "react-native-svg";
 import {
   StyleSheet,
@@ -16,6 +17,8 @@ import {
 } from 'react-native';
 
 export default function Prrop( {navigation}){
+  
+
   const PressHandler = () => {
     navigation.navigate('SB')
   }

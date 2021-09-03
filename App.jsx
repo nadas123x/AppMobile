@@ -7,5 +7,6 @@ import Navigator from './component/HomeStacker/Hs';
 export default function App() {
   return (
     <Navigator/>
+     
   );
 }

@@ -11,12 +11,13 @@ import {
   Button
 } from 'react-native';
 
-
+import {BackHandler} from 'react-native'
 export default class Posts extends Component {
 
   
   constructor(props) {
     super(props);
+    
     this.state = {
       data: [
         {id:1, title: "Actualités",   
@@ -32,6 +33,16 @@ export default class Posts extends Component {
       ]
     };
   }
+  /* la fonction ci-desssous permets d'interdire de revenir en arrière quand on est sur le componenent Posts */
+  componentDidMount(){
+      const onBackPress = () => {
+        BackHandler.exitApp()
+        return false
+      };
+      BackHandler.addEventListener('hardwareBackPress', onBackPress);
+
+  }
+  ///////////////////////////////////////////////////////////////
   handleMenu = (idMenu) => {
     console.log("chka7   " + idMenu)
     if(idMenu==1){
@@ -54,6 +65,7 @@ export default class Posts extends Component {
     }
     
   }
+  
   render() {
     return (
       <View style={styles.container}>

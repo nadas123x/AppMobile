@@ -3,9 +3,8 @@ import React from 'react';
 import { ImageBackground, TouchableHighlight,Image,StyleSheet, Text, View, Button } from 'react-native';
 
 export default function SB({ navigation }) {
-
   const PressHandler = () => {
-    navigation.navigate('Posts')
+    navigation.navigate('Animation')
   }
   return (
 
@@ -13,7 +12,7 @@ export default function SB({ navigation }) {
       <View style={styles.usineContainer}>
         <ImageBackground source={require('../../assets/ocpp.jpg')}  resizeMode="cover"  style={styles.image}>
           <View style={styles.titles}>
-            <Image source ={{uri:"https://ocpsiteprodsa.blob.core.windows.net/media/2021-03/OCP%20Group_s.png" }}style={styles.bc} />
+            <Image source ={{uri:"https://www.afriquemagazine.com/sites/default/files/2021-04/logo%20OCP%20Quadri%5B1%5D.png" }}style={styles.bc} />
             <TouchableHighlight 
                 style ={{
                     height: 30,
@@ -69,6 +68,7 @@ const styles = StyleSheet.create({
       marginLeft: 8,
     alignSelf: 'center',
     justifyContent: 'center',
+
    
   },
 button1: {
