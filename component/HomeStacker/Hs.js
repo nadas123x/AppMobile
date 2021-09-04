@@ -6,6 +6,7 @@ import Posts from '../UzinItem/Posts';
 import SB from '../StyledButton/SB';
 import Animation from '../Animation/Animation';
 import News from '../StyledButton/News';
+import ActualiteContent from '../ActualiteContent/ActuContent'
 const screens={
 
     
@@ -40,6 +41,9 @@ const screens={
             title: `terribl`,
             headerShown:false
           }),
+    },
+    ActualiteContent:{
+      screen:ActualiteContent,
     },
    
 

@@ -5,13 +5,8 @@ const timer = require('react-native-timer');
 import * as elements from './elements.json';
 const Animation = ({navigation}) => {
   function intervalAction() {
-
       if(count.current==13){
         timer.clearInterval('tim')
-        timer.setTimeout("lol",()=>{navigation.navigate('Posts')},2000)
-        
-        
-        
       }
       
       count.current+=1
@@ -23,6 +18,9 @@ const Animation = ({navigation}) => {
       setMassFloat(tab.current[count.current]['massFloat'])
     
   }
+  const getActualites = async ()=>{
+    await fetch('https://ocpgetarticles.younessrihr.repl.co').then(r=>r.json()).then(r=> {setActualite(r)})
+  }
   const tab=useRef([])
   const count=useRef(0)
   const vitesse=useRef(1000)
@@ -32,15 +30,10 @@ const Animation = ({navigation}) => {
   const [abrev,setAbrev]=useState("H")
   const [massFloat,setMassFloat]=useState(1)
   const fadeAnim = useRef(new Animated.Value(0)).current;
-  // Similaire à componentDidMount et componentDidUpdate :
-/*
-  useEffect(()=>{
-    
-    timer.clearInterval("tim")
-    timer.setInterval("tim",intervalAction,400)
-    
-  },[vitesse.current]);*/
+  const [actualite,setActualite]=useState([])
+
   useEffect(  () => {
+    getActualites()
     Animated.timing(fadeAnim, {
       toValue: 100,
       duration: 7000,
@@ -70,10 +63,15 @@ const Animation = ({navigation}) => {
       
    }
      loadData();
-
-    timer.setInterval('tim',intervalAction,200)
+   
+    timer.setInterval('tim',intervalAction,300)
+    
   },[]);
-
+useEffect(()=>{
+  if(actualite.length!=0){
+    timer.setTimeout("lol",()=>{navigation.navigate('Posts',{actualite})},2000)
+  }
+},[actualite])
  
 
   
