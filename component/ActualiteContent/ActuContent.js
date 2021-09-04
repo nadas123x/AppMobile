@@ -1,6 +1,6 @@
 
 import React,{useEffect,useState} from 'react'
-import {Text,View,StyleSheet,Image} from 'react-native'
+import {Text,View,StyleSheet,Image,ScrollView } from 'react-native'
 function ActuContent({navigation}) {
     
 const [actualite,setActualite]=useState(navigation.state.params['actualite'])
@@ -9,14 +9,14 @@ console.log(actualite)
     },[])
     return (
         <View  style={styles.container}>
-        <View style={styles.containerText}>
+        <ScrollView  style={styles.containerText}>
             <Text style={styles.title}>{actualite.title}...</Text>
             <Text style={styles.date}>07/08/2001</Text>
             <View style={{borderBottomColor: 'black',borderBottomWidth: 1,marginBottom:'10%',marginTop:'2%',opacity:"0.2"}}/>
             <Image style ={styles.image} source={{uri:actualite.img}}/>
             <View style={{borderBottomColor: 'black',borderBottomWidth: 1,marginBottom:'10%',marginTop:'2%',opacity:"0.2"}}/>
             <Text>{actualite.content}</Text>
-            </View>
+            </ScrollView>
         </View>
        
     )
