@@ -69,7 +69,7 @@ const Animation = ({navigation}) => {
   },[]);
 useEffect(()=>{
   if(actualite.length!=0){
-    timer.setTimeout("lol",()=>{navigation.navigate('Posts',{actualite})},2000)
+    timer.setTimeout("lol",()=>{navigation.navigate('Posts',{actualite})},1000)
   }
 },[actualite])
  

@@ -33,16 +33,16 @@ export default class Menu extends Component {
           horizontal={false}
           numColumns={2}
           keyExtractor= {(item) => {
-            return item.id;
+            return item.id; 
           }}
           renderItem={({item}) => {
             return (
               <TouchableOpacity style={[styles.card, {backgroundColor:this.state.data.color}]} onPress={() => {this.props.navigation.navigate('ActualiteContent',{'actualite':this.state.actualite[item.id]})}}>
                 <View style={styles.cardHeader}>
-                  <Text style={styles.title}>{item.title}</Text>
-                  <Image style ={styles.icon1} source={{uri:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"}}/>
+                  <Text style={styles.title}>{item.title}...</Text>
+                  <Image style ={styles.icon1} source={{uri:this.state.actualite[item.id]['img']}}/>
                 </View>
-                <Image style={styles.cardImage} source={{uri:this.state.data.image}}/>
+                <Image style={styles.cardImage} source={{uri:this.state.actualite[item.id]['img']}}/>
                 <View style={styles.cardFooter}>
                   <Text style={styles.subTitle}>{item.members} </Text>
                 </View>
