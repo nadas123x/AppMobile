@@ -8,6 +8,8 @@ import Animation from '../Animation/Animation';
 import News from '../StyledButton/News';
 import Pr from '../Propos/Pr';
 import Prr from '../Propos/Prr';
+import ActualiteContent from '../ActualiteContent/ActuContent'
+
 const screens={
 
     
@@ -49,6 +51,9 @@ screen:Prr
             title: `terribl`,
             headerShown:false
           }),
+    },
+    ActualiteContent:{
+      screen:ActualiteContent,
     },
    
 

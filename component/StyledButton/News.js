@@ -15,20 +15,13 @@ export default class Menu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [
-        {id:1, title: "",      color:"greenforest",   image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"},
-        {id:1, title: "",     color:"#greenforest",  image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"},
-        {id:2, title: "",     color:"greenforest",  image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"} ,
-        {id:3, title: "",   color:"greenforest",   image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"} ,
-        {id:4, title: "",  color:"#greenforest",  image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"} ,
-        {id:5, title: "",   color:"#greenforest",   image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"} ,
-        {id:6, title: "",   color:"greenforest",  image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"} ,
-       
-      ]
+      data: 
+        {color:"greenforest",   image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"},
+      actualite:this.props.navigation.state.params['actualite']
     };
   }
 
-  
+
 
 
   render() {
@@ -36,7 +29,7 @@ export default class Menu extends Component {
       <View style={styles.container}>
         <FlatList style={styles.list}
           contentContainerStyle={styles.listContainer}
-          data={this.state.data}
+          data={this.state.actualite}
           horizontal={false}
           numColumns={2}
           keyExtractor= {(item) => {
@@ -44,14 +37,14 @@ export default class Menu extends Component {
           }}
           renderItem={({item}) => {
             return (
-              <TouchableOpacity style={[styles.card, {backgroundColor:item.color}]} onPress={() => {this.clickEventListener(item.view)}}>
+              <TouchableOpacity style={[styles.card, {backgroundColor:this.state.data.color}]} onPress={() => {this.props.navigation.navigate('ActualiteContent',{'actualite':this.state.actualite[item.id]})}}>
                 <View style={styles.cardHeader}>
                   <Text style={styles.title}>{item.title}</Text>
-                  <Image style={styles.icon1} source={{uri:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"}}/>
+                  <Image style ={styles.icon1} source={{uri:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"}}/>
                 </View>
-                <Image style={styles.cardImage} source={{uri:item.image}}/>
+                <Image style={styles.cardImage} source={{uri:this.state.data.image}}/>
                 <View style={styles.cardFooter}>
-                  <Text style={styles.subTitle}>{item.members} actualité</Text>
+                  <Text style={styles.subTitle}>{item.members} </Text>
                 </View>
               </TouchableOpacity>
             )

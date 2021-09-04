@@ -34,19 +34,21 @@ export default class Posts extends Component {
     };
   }
   /* la fonction ci-desssous permets d'interdire de revenir en arrière quand on est sur le componenent Posts */
+  
   componentDidMount(){
       const onBackPress = () => {
         BackHandler.exitApp()
         return false
       };
       BackHandler.addEventListener('hardwareBackPress', onBackPress);
-
+      
   }
   ///////////////////////////////////////////////////////////////
   handleMenu = (idMenu) => {
     console.log("chka7   " + idMenu)
     if(idMenu==1){
-      this.props.navigation.navigate('News')
+      let actualite=this.props.navigation.state.params['actualite']
+      this.props.navigation.navigate('News',{actualite})
     }
     if(idMenu==2){
       this.props.navigation.navigate('Prrop')
@@ -69,6 +71,7 @@ export default class Posts extends Component {
   render() {
     return (
       <View style={styles.container}>
+       
         <FlatList style={styles.list}
           
           data={this.state.data}
