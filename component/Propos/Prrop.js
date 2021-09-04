@@ -20,13 +20,13 @@ export default function Prrop( {navigation}){
   
 
   const PressHandler = () => {
-    navigation.navigate('SB')
+    navigation.navigate('Pr')
   }
     return (
       <ScrollView>
         <View style={styles.container}>
         <ImageBackground
-        source={{uri: 'https://lobservateur.info/uploads/imported_images/uploads/2016/09/ocp.png'}}
+        source={{uri: 'https://wallpaperaccess.com/full/2693274.jpg'}}
         style={styles.image}
     />
      <View style={styles.ellipseStack}>
@@ -36,7 +36,7 @@ export default function Prrop( {navigation}){
             fill="rgba(255,255,255,1)"
             cx={410}
             cy={465}
-            rx={439}
+            rx={489}
             ry={435}
           ></Ellipse>
         </Svg>
@@ -44,35 +44,35 @@ export default function Prrop( {navigation}){
          
               <Text style={styles.headerTitle}>
 
-              <Image source ={{uri:'https://www.salon-agriculture.ma/wp-content/uploads/2018/03/Ocp1-660x330.jpg' }}style={styles.bc} />
+              <Image source ={{uri:'https://seeklogo.com/images/O/ocp-africa-logo-8D8E6B532F-seeklogo.com.png' }}style={styles.bc} />
               </Text>
               
           </View>
-          <TouchableHighlight 
-                style ={{
-                    height: 30,
-                    width:30,
-                    borderRadius:80,
-                    backgroundColor : "olivedrab",
-                    marginLeft :13,
-                    marginRight:10,
-                    marginTop :30
-                }}>
-            <Button
-             title='->'
-             alignItems='center'
-               onPress={PressHandler}
-
-               color="olivedrab"             />
-               </TouchableHighlight>
+         
           <View style={styles.postContent}>
               <Text style={styles.postTitle}>
-                    Présentation Groupe OCP:
+                    Présentation:
               </Text>
               
 
               <Text style={styles.postDescription}>
-              OCP a été créé en 1920 en tant que Office Chérifien des Phosphates. Nous avons démarré notre activité avec l’exploitation d’une première mine à Khouribga. Nos activités s’étendent aujourd’hui sur cinq continents et nous travaillons tout au long de la chaîne de valeur des phosphates que ce soit dans l’extraction minière, la transformation industrielle ou encore l’éducation et le développement de communautés.
+              Un des leaders mondiaux sur le marché du phosphate et ses
+dérivés, OCP opère sur les cinq continents et dispose des plus
+importantes réserves de phosphate au monde. Avec plus de 90 ans
+d’expérience dans la mine et 45 ans en chimie, OCP offre l’une
+des plus larges gammes de roche pour divers usages. Premier
+exportateur de phosphate brut et d’acide phosphorique dans le
+monde et l’un des principaux exportateurs d’engrais phosphatés,
+OCP joue un rôle central dans ses régions d’implantation et
+emploie directement près de 20 000 personnes ce qui le place dans
+le peloton de tête des plus grands employeurs du Royaume.
+Première entreprise industrielle du Maroc, OCP contribue
+substantiellement au développement de l’économie nationale par
+le biais de ses exportations .En
+outre, OCP apporte un soutien indéfectible à l’agriculture
+marocaine en général et aux PME en particulier.
+
+
 
 
 
@@ -80,7 +80,25 @@ export default function Prrop( {navigation}){
               </Text>
             
 
+              <TouchableHighlight 
+                style ={{
+                    height: 60,
+                    width:60,
+                    borderRadius:80,
+                    backgroundColor : "white",
+                    marginLeft :305,
+                    marginRight:20,
+                    marginTop :85
+                }}>
+            <Button
+             title=' ►'
+             alignItems='center'
+               onPress={PressHandler}
+
+               color="olive"  
               
+                       />
+               </TouchableHighlight>
 
               
 
@@ -88,13 +106,13 @@ export default function Prrop( {navigation}){
                 <Image style={styles.avatar}
                   source={{uri: 'https://bootdey.com/img/Content/avatar/avatar1.png'}}/>
 
-                <Text style={styles.name}>
-                    Johan Doe
-                </Text>
+              
               </View>
       
               <TouchableOpacity style={styles.shareButton}>
-                <Text style={styles.shareButtonText}>Like</Text>  
+                <Text style={styles.shareButtonText}>
+                  
+                  </Text>  
               </TouchableOpacity> 
           </View>
         </View>
@@ -105,6 +123,10 @@ export default function Prrop( {navigation}){
 
 
 const styles = StyleSheet.create({
+  octet: {
+    fontFamily: 'icomoon',
+    fontSize: 20,
+  },
   container:{
     backgroundColor: 'transparent',
     height: Dimensions.get('window').height,
@@ -114,7 +136,7 @@ const styles = StyleSheet.create({
   ellipse: {
     top: 0,
     left: 0,
-    width:809,
+    width:800,
     height: 800,
     position: "absolute"
   },
@@ -127,30 +149,16 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   header:{
-    padding:15,
+    marginTop:60,
+    padding:10,
     borderRadius:80,
-    backgroundColor: "transparent",
+    
     fontWeight:'bold',
     borderRadius:80,
     
   },
-  bc: {
-    top: 0,
-    left: 0,
-    position: "absolute",
-    right: 0,
-    bottom: 1,
-   
-    width: 60,
-    height: 45,
-      
-   
-  },
-  headerTitle:{
-    fontSize:20,
-    color:"cyan",
-    marginTop:1,
-  },
+  
+
   image:{
     width: '100%',
     height: '100%',
@@ -159,28 +167,23 @@ const styles = StyleSheet.create({
 
 
   },
-  name:{
-    fontSize:22,
-    color:"#FFFFFF",
-    fontWeight:'600',
-  },
-  postContent: {
-    flex: 1,
-    padding:30,
-  },
+  
+  
   postTitle:{
     fontSize:20,
     fontWeight:"bold",
-    marginLeft:110,
+    textDecorationLine: "underline",
+    marginLeft:200,
+    marginTop:0,
     color:'olive',
     backgroundColor: "transparent",
-    padding: 10,
-    borderRadius: 30,
+    padding: 1,
   
+    borderRadius: 30
   },
   postDescription:{
-    fontSize:16,
-    marginTop:0,
+    fontSize:14,
+    marginTop:18,
     marginLeft:90,
   },
 
