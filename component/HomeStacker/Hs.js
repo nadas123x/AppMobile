@@ -6,7 +6,10 @@ import Posts from '../UzinItem/Posts';
 import SB from '../StyledButton/SB';
 import Animation from '../Animation/Animation';
 import News from '../StyledButton/News';
+import Pr from '../Propos/Pr';
+import Prr from '../Propos/Prr';
 import ActualiteContent from '../ActualiteContent/ActuContent'
+
 const screens={
 
     
@@ -30,11 +33,18 @@ const screens={
     Prrop:{
         screen: Prrop
     },
-    
+
+    Pr:{
+      screen:Pr
+    },
+    Prr:{
+screen:Prr
+    },
     News:{
         screen: News
 
     },
+   
     Animation:{
         screen:Animation,
         navigationOptions: ({ navigation }) => ({
