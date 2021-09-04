@@ -74,7 +74,6 @@ export default function Prrop( {navigation}){
               <Text style={styles.postDescription}>
               OCP a été créé en 1920 en tant que Office Chérifien des Phosphates. Nous avons démarré notre activité avec l’exploitation d’une première mine à Khouribga. Nos activités s’étendent aujourd’hui sur cinq continents et nous travaillons tout au long de la chaîne de valeur des phosphates que ce soit dans l’extraction minière, la transformation industrielle ou encore l’éducation et le développement de communautés.
 
-OCP a démarré sa production en mars 1921 à Khouribga et exporté ses premiers produits depuis le port de Casablanca plus tard la même année. Une deuxième mine a été ouverte à Youssoufia en 1931 ainsi qu’une troisième plus tard en 1976 à Benguerir. Le Groupe OCP s’est ensuite diversifié en investissant dans la transformation des phosphates et en implantant des sites chimiques à Safi (1965) et Jorf Lasfar (1984).
 
 
 
