@@ -1,3 +1,4 @@
+
 import React,{useEffect,useState} from 'react'
 import {Text,View,StyleSheet,Image,ScrollView } from 'react-native'
 function ActuContent({navigation}) {
