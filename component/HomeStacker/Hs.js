@@ -9,7 +9,7 @@ import News from '../StyledButton/News';
 import Pr from '../Propos/Pr';
 import Prr from '../Propos/Prr';
 import ActualiteContent from '../ActualiteContent/ActuContent'
-
+import Tyy from '../Ty/Tyy'
 const screens={
 
     
@@ -33,7 +33,9 @@ const screens={
     Prrop:{
         screen: Prrop
     },
-
+    Tyy:{
+      screen: Tyy
+    },
     Pr:{
       screen:Pr
     },

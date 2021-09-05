@@ -71,24 +71,38 @@ import React, { Component,useEffect,useFocusEffect } from 'react';
                
                <Text style={styles.secTitle}>
              1920
-               </Text> :{"\n"} Création de l’Office Chérifien des Phosphates {"\n"}
+               </Text> :{"\n"} Création de l’Office Chérifien des Phosphates. {"\n"}
+               <Text style={styles.secTitle}>
+             1965
+               </Text>:{"\n"} Création de la société MAROC CHIMIE. {"\n"}
                <Text style={styles.secTitle}>
              1975
-               </Text>:{"\n"} Création de la société MAROC CHIMIE {"\n"}
+               </Text>:{"\n"} Création du Groupe OCP. {"\n"}
                <Text style={styles.secTitle}>
-             1975
-               </Text>:{"\n"} Création du Groupe OCP {"\n"}Création du Groupe OCP
-1976-1986 : Démarrage de Maroc Phosphore I , MP II en 1981 , et
-MP III / IV 1986
-1996-2004 : Création de plusieurs Joint Venture (JV) avec des
-partenaires Indiens et Pakistanais.
-2008 : Transformation de l’Office chérifien des phosphates en
-société anonyme OCP SA
-2009 : Démarrage de la JV maroco-brésilienne : bunge Maroc
-Phosphore
-2010 : Création d’une JV avec Jacobs engineering (JESA),
-Ouverture de bureaux en Argentine et au Brésil
-2011 : Lancement de OCP Skills
+             1976-1986
+               </Text> :{"\n"}  Démarrage de Maroc Phosphore I , MP II en 1981 , et
+                  MP III / IV en 1986. {"\n"}
+<Text style={styles.secTitle}>
+1996-2004 :
+               </Text> :{"\n"}  Création de plusieurs Joint Venture (JV) avec des
+partenaires Indiens et Pakistanais. {"\n"}
+
+<Text style={styles.secTitle}>
+2008
+               </Text> :{"\n"} Transformation de l’Office chérifien des phosphates en
+société anonyme OCP SA. {"\n"}
+<Text style={styles.secTitle}>
+             2009
+               </Text> :{"\n"}  Démarrage de la JV maroco-brésilienne : bunge Maroc
+Phosphore. {"\n"}
+<Text style={styles.secTitle}>
+             2010
+               </Text> :{"\n"}  Création d’une JV avec Jacobs engineering (JESA),
+Ouverture de bureaux en Argentine et au Brésil. {"\n"}
+<Text style={styles.secTitle}>
+             2011
+               </Text> :{"\n"}  Lancement de OCP Skills. {"\n"}
+
  
  
  
@@ -111,7 +125,7 @@ Ouverture de bureaux en Argentine et au Brésil
                      backgroundColor : "white",
                      marginLeft :305,
                      marginRight:20,
-                     marginTop :60
+                     marginTop :0
                  }}>
              <Button
               title=' ►'
@@ -160,16 +174,10 @@ Ouverture de bureaux en Argentine et au Brésil
      position: "absolute"
    },
   
-   icon:{
-     width:100,
-     height:100,
-     marginLeft:'50',
-     justifyContent: 'flex-end',
-     alignItems: 'flex-end',
-   },
+   
    header:{
      marginTop:70,
-     padding:0,
+     padding:2,
      borderRadius:80,
      
      fontWeight:'bold',
@@ -193,11 +201,11 @@ Ouverture de bureaux en Argentine et au Brésil
    },
   
    secTitle:{
-    fontSize:15,
+    fontSize:17,
     fontWeight:"bold",
     color:"darkseagreen",
     marginLeft:120,
-    marginTop:0,
+    marginTop:5,
    },
    postTitle:{
      fontSize:20,
