@@ -9,7 +9,6 @@ import {
   ScrollView,
   FlatList,
 } from 'react-native';
-
 export default class Menu extends Component {
 
   constructor(props) {
@@ -37,15 +36,17 @@ export default class Menu extends Component {
           }}
           renderItem={({item}) => {
             return (
-              <TouchableOpacity style={[styles.card, {backgroundColor:this.state.data.color}]} onPress={() => {this.props.navigation.navigate('ActualiteContent',{'actualite':this.state.actualite[item.id]})}}>
+              <TouchableOpacity style={[styles.card, {backgroundColor:"#fff"}]} onPress={() => {this.props.navigation.navigate('ActualiteContent',{'actualite':this.state.actualite[item.id]})}}>
                 <View style={styles.cardHeader}>
-                  <Text style={styles.title}>{item.title}...</Text>
-                  <Image style ={styles.icon1} source={{uri:this.state.actualite[item.id]['img']}}/>
+                  <Text style={styles.title}>{item.title.replace('\n','')}...</Text>
+                  <Image style ={styles.icon1} source={{uri:item['img']}}/>
                 </View>
-                <Image style={styles.cardImage} source={{uri:this.state.actualite[item.id]['img']}}/>
+                <Image style={styles.cardImage} source={{uri:item['img']}}/>
+                <Text style={styles.date}>{item['date']} </Text>
                 <View style={styles.cardFooter}>
-                  <Text style={styles.subTitle}>{item.members} </Text>
+                  <Text style={styles.subTitle}>{item['desc'].replace('\n','')} </Text>
                 </View>
+                
               </TouchableOpacity>
             )
           }}/>
@@ -57,11 +58,10 @@ export default class Menu extends Component {
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    marginTop:20,
   },
   list: {
     //paddingHorizontal: 5,
-    backgroundColor:"green",
+    backgroundColor:"#A4BD24",
   },
   listContainer:{
     alignItems:'center'
@@ -71,6 +71,14 @@ const styles = StyleSheet.create({
     marginHorizontal:2,
     marginVertical:2,
     flexBasis: '48%',
+    marginTop:20,
+    borderRadius:5,
+    shadowColor: 'black',
+    shadowOffset: { width: 1, height: 1 },
+    shadowOpacity: 1,
+    shadowRadius: 100,  
+    elevation: 10,
+    
   },
   cardHeader: {
     paddingVertical: 17,
@@ -79,7 +87,12 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 1,
     flexDirection: 'row',
     alignItems:"center", 
-    justifyContent:"center"
+    justifyContent:"center",
+    
+  },
+  date:{
+    marginTop:'5%',
+  marginLeft:'5%'
   },
   cardContent: {
     paddingVertical: 12.5,
@@ -87,28 +100,25 @@ const styles = StyleSheet.create({
   },
   cardFooter:{
     flexDirection: 'row',
-    justifyContent: 'space-between',
     paddingTop: 12.5,
     paddingBottom: 25,
-    paddingHorizontal: 16,
-    borderBottomLeftRadius: 1,
-    borderBottomRightRadius: 1,
+
   },
   cardImage:{
-    height: 70,
-    width: 70,
+    height: 140,
+    width: 100,
     alignSelf:'center'
   },
   title:{
     fontSize:16,
     flex:1,
-    color:"#FFFFFF",
+    color:"black",
     fontWeight:'bold'
   },
   subTitle:{
     fontSize:12,
-    flex:1,
-    color:"#FFFFFF",
+    color:"black",
+    textAlign:'center',
   },
   icon:{
     height: 20,
