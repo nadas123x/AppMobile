@@ -71,24 +71,24 @@ import React, { Component,useEffect,useFocusEffect } from 'react';
                
                <Text style={styles.secTitle}>
              1920
-               </Text> :{"\n"} Création de l’Office Chérifien des Phosphates {"\n"}
+               </Text> :{"\n"} Création de l’Office Chérifien des Phosphates {"\n"}
                <Text style={styles.secTitle}>
              1975
                </Text>:{"\n"} Création de la société MAROC CHIMIE {"\n"}
                <Text style={styles.secTitle}>
              1975
                </Text>:{"\n"} Création du Groupe OCP {"\n"}Création du Groupe OCP
-1976-1986 : Démarrage de Maroc Phosphore I , MP II en 1981 , et
+1976-1986 : Démarrage de Maroc Phosphore I , MP II en 1981 , et
 MP III / IV 1986
-1996-2004 : Création de plusieurs Joint Venture (JV) avec des
+1996-2004 : Création de plusieurs Joint Venture (JV) avec des
 partenaires Indiens et Pakistanais.
-2008 : Transformation de l’Office chérifien des phosphates en
+2008 : Transformation de l’Office chérifien des phosphates en
 société anonyme OCP SA
-2009 : Démarrage de la JV maroco-brésilienne : bunge Maroc
+2009 : Démarrage de la JV maroco-brésilienne : bunge Maroc
 Phosphore
-2010 : Création d’une JV avec Jacobs engineering (JESA),
+2010 : Création d’une JV avec Jacobs engineering (JESA),
 Ouverture de bureaux en Argentine et au Brésil
-2011 : Lancement de OCP Skills
+2011 : Lancement de OCP Skills
  
  
  
