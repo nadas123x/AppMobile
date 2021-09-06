@@ -27,7 +27,7 @@ d’extraction qui
 vient avec une humidité de 12% à 18% , le séchage la
 diminue à un pourcentage qui ne dépasse pas 2%.
 Cette usine est constitué de plusieurs unités qui fonctionnent
-de façon liée, et les éléments de chaque de chaque unité sont
+de façon liée, et les éléments de chaque de chaque unité ssssont
 en double pour assurer la continuité de service.</Text>
         </View>
       </View>
