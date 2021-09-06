@@ -57,13 +57,13 @@ export default class Posts extends Component {
       this.props.navigation.navigate('SB')
     }
     if(idMenu==4){
-      this.props.navigation.navigate('SB')
+      this.props.navigation.navigate('Usine')
     }
     if(idMenu==5){
       this.props.navigation.navigate('Tyy')
     }
     if(idMenu==6){
-      this.props.navigation.navigate('News')
+      this.props.navigation.navigate('Tyy')
     }
     
   }

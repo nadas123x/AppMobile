@@ -9,7 +9,8 @@ import News from '../StyledButton/News';
 import Pr from '../Propos/Pr';
 import Prr from '../Propos/Prr';
 import ActualiteContent from '../ActualiteContent/ActuContent'
-import Tyy from '../Ty/Tyy'
+import Tyy from '../Ty/Tyy';
+import Usine from '../UsineBen/Usine';
 const screens={
 
     
@@ -42,6 +43,10 @@ const screens={
     Prr:{
 screen:Prr
     },
+    Usine:{
+      screen:Usine
+    },
+    
     News:{
         screen: News
 
