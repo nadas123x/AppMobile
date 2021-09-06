@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { ImageBackground, TouchableHighlight,Image,StyleSheet, Text, View, Button } from 'react-native';
+import React, { cloneElement } from 'react';
+import { ImageBackground, TouchableHighlight, Image, StyleSheet, Text, View, Button } from 'react-native';
 
 export default function SB({ navigation }) {
   const PressHandler = () => {
@@ -10,26 +10,30 @@ export default function SB({ navigation }) {
 
     <View style={styles.container}>
       <View style={styles.usineContainer}>
-        <ImageBackground source={require('../../assets/ocpp.jpg')}  resizeMode="cover"  style={styles.image}>
+        <ImageBackground source={require('../../assets/ocpp.jpg')} resizeMode="cover" style={styles.image}>
           <View style={styles.titles}>
-            <Image source ={{uri:"https://www.afriquemagazine.com/sites/default/files/2021-04/logo%20OCP%20Quadri%5B1%5D.png" }}style={styles.bc} />
-            <TouchableHighlight 
-                style ={{
-                    height: 30,
-                    width:150,
-                    borderRadius:80,
-                    backgroundColor : "olivedrab",
-                    marginLeft :130,
-                    marginRight:200,
-                    marginTop :30
-                }}>
-            <Button
-             title='Start'
-             alignItems='center'
-               onPress={PressHandler}
+            <Image source={{ uri: "https://www.afriquemagazine.com/sites/default/files/2021-04/logo%20OCP%20Quadri%5B1%5D.png" }} style={styles.bc} />
+            <TouchableHighlight
+              style={{
+                height: 30,
+                width: 100,
+                borderRadius: 80,
+                backgroundColor: "olivedrab",
+                marginTop: 30,
+                justifyContent: 'center',
+                alignSelf: 'center',
+              }}>
+              <Button
+                title='Start'
+                alignItems='center'
+                style={{
+                  justifyContent: 'center',
+                  alignSelf: 'center',
+                }}
+                onPress={PressHandler}
 
-               color="olivedrab"             />
-               </TouchableHighlight>
+                color="olivedrab" />
+            </TouchableHighlight>
 
           </View>
         </ImageBackground>
@@ -61,25 +65,31 @@ const styles = StyleSheet.create({
     justifyContent: "center"
 
   },
- 
+
   bc: {
     width: 90,
     height: 100,
-      marginLeft: 8,
+    marginLeft: 8,
     alignSelf: 'center',
     justifyContent: 'center',
 
-   
+
   },
-button1: {
-  width: 500,
-  marginTop: 20,
-  backgroundColor: "green",
-  padding: 15,
-  borderRadius: 50,
+  button1: {
+    width: 500,
+    marginTop: 20,
+    backgroundColor: "green",
+    padding: 15,
+    borderRadius: 50,
+  },
+  title: {
+    alignContent: 'center',
+    alignItems: 'center',
+    marginLeft: 122,
+    backgroundColor: "black",
+  }
+
+
 }
 
-
-  }
- 
 );

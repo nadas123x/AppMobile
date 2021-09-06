@@ -1,5 +1,5 @@
             
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import {
   StyleSheet,
   Text,
@@ -12,24 +12,24 @@ import {
 } from 'react-native';
 
 
-export default class SignUpView extends Component {
+const SignUpView  = ({navigation}) =>  {
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-  constructor(props) {
-    super(props);
-    state = {
-      fullName: '',
-      email   : '',
-      Message: '',
+  const onClickListener = () => {
+    if(fullName === '' || message ===''){
+      Alert.alert("", "Merci de remplir tous les champs");
+    }else {
+      console.log("fullName : " + fullName);
+      console.log("email : " + email);
+      console.log("Message : " + message);
+      Alert.alert("", "Merci pour votre visite");
     }
   }
-  
-
-  onClickListener = (viewId) => {
-    Alert.alert("", "Merci pour votre visite");
-  }
 
   
-  render() {
+  
     return (
       <View style={styles.container}>
         <View style={styles.inputContainer}>
@@ -38,7 +38,7 @@ export default class SignUpView extends Component {
               placeholder="Full name"
               keyboardType="email-address"
               underlineColorAndroid='transparent'
-              onChangeText={(fullName) => this.setState({fullName})}/>
+              onChangeText={(fullName) => setFullName(fullName)}/>
         </View>
 
         <View style={styles.inputContainer}>
@@ -47,26 +47,24 @@ export default class SignUpView extends Component {
               placeholder="Email"
               keyboardType="email-address"
               underlineColorAndroid='transparent'
-              onChangeText={(email) => this.setState({email})}/>
+              onChangeText={(email) => setEmail(email)}/>
         </View>
         
         <View style={styles.inputContainer}>
           <Image style={styles.inputIcon} source={{uri: 'https://png.icons8.com/key-2/ultraviolet/50/3498db'}}/>
           <TextInput style={styles.inputs}
               placeholder="Message"
-             
+              keyboardType="email-address"
               underlineColorAndroid='transparent'
-              onChangeText={(password) => this.setState({Message})}/>
+              onChangeText={(message) => setMessage(message)}/>
         </View>
 
-        <TouchableHighlight style={[styles.buttonContainer, styles.signupButton]} onPress={() => this.onClickListener('sign_up')}>
+        <TouchableHighlight style={[styles.buttonContainer, styles.signupButton]} onPress={() => onClickListener('sign_up')}>
           <Text style={styles.signUpText}>Submit</Text>
         </TouchableHighlight>
       </View>
     );
   }
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -113,3 +111,4 @@ const styles = StyleSheet.create({
     color: 'white',
   }
 });
+export default SignUpView;
