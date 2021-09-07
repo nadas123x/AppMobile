@@ -8,13 +8,14 @@ import {
   Button,
   TouchableHighlight,
   Image,
-  Alert
+  Alert,
+  ImageBackground,
 } from 'react-native';
 
-
+import {BackHandler} from 'react-native';
 const SignUpView  = ({navigation}) =>  {
   const [fullName, setFullName] = useState('');
-  const [email, setEmail] = useState('');
+ 
   const [message, setMessage] = useState('');
 
   const onClickListener = () => {
@@ -22,9 +23,10 @@ const SignUpView  = ({navigation}) =>  {
       Alert.alert("", "Merci de remplir tous les champs");
     }else {
       console.log("fullName : " + fullName);
-      console.log("email : " + email);
+     
       console.log("Message : " + message);
       Alert.alert("", "Merci pour votre visite");
+      navigation.navigate('SB')
     }
   }
 
@@ -32,6 +34,7 @@ const SignUpView  = ({navigation}) =>  {
   
     return (
       <View style={styles.container}>
+         <ImageBackground source={require('../../assets/ocpp.jpg')} resizeMode="cover" style={styles.image}></ImageBackground>
         <View style={styles.inputContainer}>
           <Image style={styles.inputIcon} source={{uri: 'https://png.icons8.com/male-user/ultraviolet/50/3498db'}}/>
           <TextInput style={styles.inputs}
@@ -41,14 +44,7 @@ const SignUpView  = ({navigation}) =>  {
               onChangeText={(fullName) => setFullName(fullName)}/>
         </View>
 
-        <View style={styles.inputContainer}>
-          <Image style={styles.inputIcon} source={{uri: 'https://png.icons8.com/message/ultraviolet/50/3498db'}}/>
-          <TextInput style={styles.inputs}
-              placeholder="Email"
-              keyboardType="email-address"
-              underlineColorAndroid='transparent'
-              onChangeText={(email) => setEmail(email)}/>
-        </View>
+     
         
         <View style={styles.inputContainer}>
           <Image style={styles.inputIcon} source={{uri: 'https://png.icons8.com/key-2/ultraviolet/50/3498db'}}/>
@@ -65,6 +61,8 @@ const SignUpView  = ({navigation}) =>  {
       </View>
     );
   }
+  
+///
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -105,10 +103,20 @@ const styles = StyleSheet.create({
     borderRadius:30,
   },
   signupButton: {
-    backgroundColor: "#FF4DFF",
+    backgroundColor: "olivedrab",
   },
   signUpText: {
     color: 'white',
-  }
+    fontSize:20,
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    flex: 1,
+    justifyContent: "center",
+    position:'absolute'
+
+  },
+
 });
 export default SignUpView;

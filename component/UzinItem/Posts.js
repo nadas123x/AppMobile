@@ -23,11 +23,11 @@ export default class Posts extends Component {
         {id:1, title: "Actualités",   
 
                          image:"http://fnh.ma//uploads/actualites/60a6683edaab0.jpg"},
-        {id:2, title: "",           image:"https://www.infomediaire.net/wp-content/uploads/2017/06/Phosboucraa.jpg"} ,
-        {id:3, title: " ",             image:"https://s3.lebrief.ma/s3fs-public/styles/facebook/public/2020-08/ocp_jorf_lasfar.jpg?h=c673cd1c&itok=EMNpaaP1"}, 
+        {id:2, title: "",           image:"https://www.agrimaroc.ma/wp-content/uploads/phosphates-ocp-premier-exportateur-660x330.jpg"} ,
+        {id:3, title: " ",             image:"https://www.agrimaroc.ma/wp-content/uploads/OCP-2.jpg"}, 
         {id:4, title: "",           image:"https://corpo.ocpgroup.ma/sites/default/files/styles/optimized/public/2019-03/20160309_AFC_JORF_92.jpg?itok=aPuXq3tB"}, 
         {id:5, title: "",             image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"}, 
-        {id:6, title: "",          image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"}, 
+        {id:6, title: "Merci de laisser un commentaire",          image:"https://wallpaperaccess.com/full/2091341.jpg"}, 
       
       
       ]
@@ -51,10 +51,10 @@ export default class Posts extends Component {
       this.props.navigation.navigate('News',{actualite})
     }
     if(idMenu==2){
-      this.props.navigation.navigate('Prrop')
+      this.props.navigation.navigate('SB')
     }
     if(idMenu==3){
-      this.props.navigation.navigate('SB')
+      this.props.navigation.navigate('Prrop')
     }
     if(idMenu==4){
       this.props.navigation.navigate('Usine')
@@ -125,7 +125,7 @@ export default class Posts extends Component {
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    marginTop:0,
+    marginTop:5,
   },
   list: {
     backgroundColor:"#E6E6E6",
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
   },
   /******** card **************/
   card:{
-    margin: 0,
+    margin: 2,
     borderRadius: 2,
     borderWidth: 2,
     borderColor: "olivedrab",
@@ -143,7 +143,6 @@ const styles = StyleSheet.create({
   },
   cardHeader: {
     paddingVertical: 7,
-    paddingHorizontal: 16,
     borderTopLeftRadius: 1,
     borderTopRightRadius: 1,
     justifyContent: 'space-between',
@@ -173,12 +172,18 @@ const styles = StyleSheet.create({
   },
   /******** card components **************/
   title:{
-    fontSize:22,
-    color: "forestgreen",
-    marginTop: 20,
+    fontSize:18,
+    color: "black",
+    marginTop: 5,
     fontStyle:'italic',
-    textDecorationStyle :'dotted'
+    
+    marginLeft: 20,
+    marginRight: 200,
+    borderRadius:80,
+
+    
     },
+   
   icon: {
     width:30,
     height:30,

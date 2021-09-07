@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text,ScrollView,ImageBackground,TouchableHighlight,Button, Image } from "react-native";
 
-export default function Usi({navigation}) {
+export default function Foyer({navigation}) {
     
   const PressHandler = () => {
-    navigation.navigate('Usii')
+    navigation.navigate('Usiii')
   }
   return (
     <ScrollView>
@@ -16,46 +16,26 @@ export default function Usi({navigation}) {
         <View style={styles.rect2}>
          
           <Text style={styles.description}>
-          {"\n"}   • Cette usine est constitué de plusieurs unités qui fonctionnent
-de façon liée, et les éléments de chaque de chaque unité sont
-en double pour assurer la continuité de service.
-{"\n"}
-          {"\n"}
+    
              </Text>
        
          
           <Text style={styles.description}> 
-          <Text style={styles.name}>	→ Unité de stockage du phosphate humide: {"\n"} </Text>
+         
+<Text style={styles.name}>1) Le foyer : {"\n"} </Text>
+
           {"\n"}
-          {"\n"}
-          •    Cette unité assure la fonction de la réception du phosphate
-humide provenant de la laverie , du criblage et du parc
-Elwafi . Elle est équipée de : Quatre machines de stockage
- et de deux machines de déstockage.{"\n"}
-{"\n"}
-
-
-<Text style={styles.name}>	→ Unité de stockage du fuel : {"\n"} </Text>
-{"\n"}
-          {"\n"}
-
-          •   Cette unité est destinée à la réception et le stockage du fuel
-dans des réservoirs qui alimentent les chaudières et les fours
-sécheurs.{"\n"}
-{"\n"}
-
-
-<Text style={styles.name}>	→ Unité de chaufferie : {"\n"} </Text>
-{"\n"}
-          {"\n"}
-
-          •   C’est là où on la chaudière qui produit la vapeur chaude à
-partir de l’eau déminéralisée. La vapeur permet de
-réchauffer le fuel , la température à
-laquelle il sera injecté dans le four.{"\n"}
-{"\n"}
-        
-
+          C’est une chambre de combustion d’une forme cylindrique en tôle d’acier, couverte
+intérieurement par des briques isolantes pour limiter l’échange thermique avec l’extérieur et
+protéger les tôles d’acier contre la fonte. Ce cylindre est de 14.4 m de longueur,
+3 m de diamètre interne et un volume de 74 m 3
+          
+          <Image
+            source={require('../../assets/foye.png')}
+            resizeMode="center"
+            style={styles.image}
+          ></Image>
+  
 </Text>
 <TouchableHighlight 
                 style ={{
@@ -103,17 +83,19 @@ const styles = StyleSheet.create({
     fontSize:18,
     marginLeft:0,
     marginRight:0,
-    marginTop:0,
+    marginTop:20,
     color:'darkgreen',
     backgroundColor: "transparent",
+    textDecorationLine: "underline",
+
     
     fontWeight:'bold',
   },
   image: {
-    width: 400,
-    height: 314,
-    marginTop: -20,
-    marginLeft: 2
+    width: 40,
+    height: 100,
+    marginTop: 9,
+    marginLeft: -80
   },
   description:{
     fontSize:14,

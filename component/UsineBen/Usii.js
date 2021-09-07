@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text,ScrollView,ImageBackground,TouchableHighlight,Button, Image } from "react-native";
 
-export default function Usi({navigation}) {
+export default function Usii({navigation}) {
     
   const PressHandler = () => {
-    navigation.navigate('Usii')
+    navigation.navigate('Usiii')
   }
   return (
     <ScrollView>
@@ -16,46 +16,42 @@ export default function Usi({navigation}) {
         <View style={styles.rect2}>
          
           <Text style={styles.description}>
-          {"\n"}   • Cette usine est constitué de plusieurs unités qui fonctionnent
-de façon liée, et les éléments de chaque de chaque unité sont
-en double pour assurer la continuité de service.
-{"\n"}
-          {"\n"}
+    
              </Text>
        
          
           <Text style={styles.description}> 
-          <Text style={styles.name}>	→ Unité de stockage du phosphate humide: {"\n"} </Text>
           {"\n"}
-          {"\n"}
-          •    Cette unité assure la fonction de la réception du phosphate
-humide provenant de la laverie , du criblage et du parc
-Elwafi . Elle est équipée de : Quatre machines de stockage
- et de deux machines de déstockage.{"\n"}
-{"\n"}
-
-
-<Text style={styles.name}>	→ Unité de stockage du fuel : {"\n"} </Text>
+<Text style={styles.name}>	→ Unité de stockage et chargement du phosphate sec : {"\n"} </Text>
 {"\n"}
           {"\n"}
-
-          •   Cette unité est destinée à la réception et le stockage du fuel
-dans des réservoirs qui alimentent les chaudières et les fours
-sécheurs.{"\n"}
-{"\n"}
-
-
-<Text style={styles.name}>	→ Unité de chaufferie : {"\n"} </Text>
-{"\n"}
+          •   Le phosphate criblé alimente le circuit sec où il sera classé en
+différentes qualités, cette unité comporte trois stocks ayant
+une capacité globale de 500 000 tonnes.Une station de
+chargement permet de remplir les wagons à destination du
+Port de Casablanca, et du Port de Jorf-ellasfar.{"\n"}
           {"\n"}
-
-          •   C’est là où on la chaudière qui produit la vapeur chaude à
-partir de l’eau déminéralisée. La vapeur permet de
-réchauffer le fuel , la température à
-laquelle il sera injecté dans le four.{"\n"}
+          <Text style={styles.name}>	→ Unité de séchage : {"\n"} </Text>
+          {"\n"}
+          {"\n"}
+          •    Elle comprend 8 fours sécheurs d’une capacité de 300  t/h
+chacun. Son rôle est de diminuer, par échange thermique
+l’humidité contenue dans le phosphate brut ou lavé.{"\n"}
 {"\n"}
-        
+{"\n"}
 
+<Text style={styles.name}>	♦ Pourquoi le séchage ? : {"\n"} </Text>
+
+{"\n"}
+{"\n"}
+
+•   L’eau contenue dans le phosphate augmente les frais
+de transport du produit.{"\n"}
+{"\n"}
+
+•   La valorisation du produit : les clients exigent une
+humidité bien déterminée. Au-delà de cette valeur le
+phosphate n’est pas accepté par les clients.
 </Text>
 <TouchableHighlight 
                 style ={{

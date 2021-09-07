@@ -11,7 +11,12 @@ import Prr from '../Propos/Prr';
 import ActualiteContent from '../ActualiteContent/ActuContent'
 import Tyy from '../Ty/Tyy';
 import Usine from '../UsineBen/Usine';
+import Usi from '../UsineBen/Usi';
+import Usii from '../UsineBen/Usii';
+import Usiii from '../UsineBen/Usiii';
+import Foyer from '../UsineBen/Foyer';
 const screens={
+  
 
     
     SB:{
@@ -51,7 +56,18 @@ screen:Prr
         screen: News
 
     },
-   
+   Usi:{
+     screen: Usi
+   },
+   Usii:{
+    screen: Usii
+  },
+  Usiii:{
+    screen: Usiii
+  },
+  Foyer:{
+    screen: Foyer
+  },
     Animation:{
         screen:Animation,
         navigationOptions: ({ navigation }) => ({

@@ -26,6 +26,10 @@ export default function Prrop( {navigation}){
       <ScrollView>
         <View style={styles.container}>
         <ImageBackground
+        source={{uri: 'https://i.pinimg.com/originals/03/02/bc/0302bc613ea56d6e74c6edb151712364.jpg'}}
+        style={styles.imagee}
+    />
+        <ImageBackground
         source={{uri: 'https://wallpaperaccess.com/full/2693274.jpg'}}
         style={styles.image}
     />
@@ -128,7 +132,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   container:{
-    backgroundColor: 'transparent',
+    backgroundColor: 'black',
     height: Dimensions.get('window').height,
   
 
@@ -152,7 +156,8 @@ const styles = StyleSheet.create({
     marginTop:60,
     padding:10,
     borderRadius:80,
-    
+        backgroundColor: "transparent",
+
     fontWeight:'bold',
     borderRadius:80,
     
@@ -169,6 +174,15 @@ const styles = StyleSheet.create({
   },
   
   
+  imagee:{
+      width: '100%',
+      height: '100%',
+      resizeMode: 'cover',
+      position: 'absolute',
+  
+  
+    },
+
   postTitle:{
     fontSize:20,
     fontWeight:"bold",
@@ -185,6 +199,8 @@ const styles = StyleSheet.create({
     fontSize:14,
     marginTop:18,
     marginLeft:90,
+    backgroundColor: "transparent",
+
   },
 
  
