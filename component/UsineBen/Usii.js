@@ -119,6 +119,7 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     color: "black",
     marginTop:10,
+    fontStyle:'italic',
   },
   imagee:{
     width: '100%',

@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   rect2: {
     width:420,
     height: 696,
-    backgroundColor: "rgba(208,213,214,0.66)",
+    backgroundColor: "white",
     marginTop: 45,
     marginLeft: 2,
     
@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     color: "black",
     marginTop:30,
+    fontStyle:'italic',
   },
   imagee:{
     width: '100%',

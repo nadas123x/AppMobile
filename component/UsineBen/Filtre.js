@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text,ScrollView,ImageBackground,TouchableHighlight,Button, Image } from "react-native";
 
-export default function Usi({navigation}) {
-    
+export default function Buse({navigation}) {
+  
   const PressHandler = () => {
-    navigation.navigate('Usii')
+    navigation.navigate('Usiii')
   }
   return (
     <ScrollView>
@@ -15,60 +15,68 @@ export default function Usi({navigation}) {
     />
         <View style={styles.rect2}>
          
-          <Text style={styles.description}>
-          {"\n"}   • Cette usine est constitué de plusieurs unités qui fonctionnent
-de façon liée, et les éléments de chaque de chaque unité sont
-en double pour assurer la continuité de service.
-{"\n"}
-          {"\n"}
-             </Text>
+       
        
          
           <Text style={styles.description}> 
-          <Text style={styles.name}>	→ Unité de stockage du phosphate humide: {"\n"} </Text>
-          {"\n"}
-          {"\n"}
-          •    Cette unité assure la fonction de la réception du phosphate
-humide provenant de la laverie , du criblage et du parc
-Elwafi . Elle est équipée de : Quatre machines de stockage
- et de deux machines de déstockage.{"\n"}
+         
+<Text style={styles.name}>5) Ventilateur de tirage:{"\n"}</Text>
+{"\n"}
+
+•    Deux ventilateurs (entrainés par deux moteurs électrique, pilotés par des
+variateurs de vitesse) permettent de régler la vitesse du séchage en agissant
+sur la vitesse de déplacement de la masse gazeuse.{"\n"}
+ {"\n"}
+•    Ils sont situés à l’extérieur de la chambre à poussière. Leurs rôles est de
+mettre en dépression l’ensemble du four sécheur. Ils créent une dépression
+en tête du tube ce qui provoque une circulation de l’air à l’intérieur du
+four.
+Ils facilitent :{"\n"}{"\n"}
+- Le déplacement du phosphate vers la chambre à poussière.
+{"\n"}
+
+- L’évacuation des gaz de combustion. {"\n"}
+- L’évacuation de la vapeur d’eau due au séchage. {"\n"}
+- L’évacuation de la poussière irrécupérable du phosphate à travers la
+cheminée. {"\n"}
+- L’orientation de la flamme dans le sens de déplacement du produit pour
+éviter le retour de flamme vers l’entrée du four, ce qui provoque des dégâts. {"\n"}
+
+       
+          
+          
+ 
 {"\n"}
 
 
-<Text style={styles.name}>	→ Unité de stockage du fuel : {"\n"} </Text>
-{"\n"}
-          {"\n"}
-
-          •   Cette unité est destinée à la réception et le stockage du fuel
-dans des réservoirs qui alimentent les chaudières et les fours
-sécheurs.{"\n"}
-{"\n"}
-
-
-<Text style={styles.name}>	→ Unité de chaufferie : {"\n"} </Text>
-{"\n"}
-          {"\n"}
-
-          •   C’est là où on la chaudière qui produit la vapeur chaude à
-partir de l’eau déminéralisée. La vapeur permet de
-réchauffer le fuel , la température à
-laquelle il sera injecté dans le four.{"\n"}
-{"\n"}
-        
-
+  {"\n"}
+  {"\n"}      
+  
 </Text>
+<Image
+ source={require('../../assets/fi.jpg')}
+  resizeMode="contain"
+            style={styles.image}
+          ></Image>
+            <Text style={styles.description}>
+           
+           
+
+           
+            </Text>
+          
 <TouchableHighlight 
                 style ={{
                     height: 60,
-                    width:60,
+                    width:70,
                     borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :305,
+                    marginLeft :325,
                     marginRight:20,
-                    marginTop :18
+                    marginTop :-25
                 }}>
             <Button
-             title=' ►'
+             title=' exit '
              alignItems='center'
                onPress={PressHandler}
 
@@ -82,6 +90,8 @@ laquelle il sera injecté dans le four.{"\n"}
     </ScrollView>
   );
 }
+ 
+
 
 const styles = StyleSheet.create({
   container: {
@@ -106,14 +116,17 @@ const styles = StyleSheet.create({
     marginTop:0,
     color:'darkgreen',
     backgroundColor: "transparent",
+    textDecorationLine: "underline",
+
     
     fontWeight:'bold',
   },
   image: {
-    width: 400,
-    height: 314,
-    marginTop: -20,
-    marginLeft: 2
+    width: 500,
+    height: 230,
+    marginLeft: -50,
+    marginTop:-60,
+    
   },
   description:{
     fontSize:14,

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text,ScrollView,ImageBackground,TouchableHighlight,Button, Image } from "react-native";
 
-export default function Foyer({navigation}) {
+export default function Chambre({navigation}) {
     
   const PressHandler = () => {
-    navigation.navigate('Foyer1')
+    navigation.navigate('Usiii')
   }
   return (
     <ScrollView>
@@ -20,60 +20,60 @@ export default function Foyer({navigation}) {
          
           <Text style={styles.description}> 
          
-<Text style={styles.name}>1) Le foyer  :{"\n"}</Text>
+<Text style={styles.name}>4) La chambre à poussière :{"\n"}</Text>
 {"\n"}
 
-•    C’est une chambre de combustion d’une forme cylindrique en tôle d’acier, couverte
-intérieurement par des briques isolantes pour limiter l’échange thermique avec l’extérieur et
-protéger les tôles d’acier contre la fonte. Ce cylindre est de 14.4 m de longueur, 3m de diamètre interne et un volume de 74 métres au cube.
+•  C’est la partie située juste après le tube sécheur d’une longueur supérieure
+au diamètre de la virole, ce qui assure une baisse de vitesse de la masse
+gazeuse afin de récupérer les grosses particules par effet de gravitation et
+les particules fines au niveau de la chambre de dépoussiérage par les filtres
+à manches.{"\n"}
 {"\n"}
-{"\n"}
-
-
-
-       
-          
-          {"\n"}
- 
-{"\n"}
-
-
-        
-  
 </Text>
-<Image
- source={require('../../assets/foye.png')}
+        <Image
+ source={require('../../assets/ch.jpg')}
   resizeMode="contain"
             style={styles.image}
           ></Image>
-            <Text style={styles.description}>
-            {"\n"}
-            •   Cette chambre à pour rôle de générer le gaz
-chaud produit par une réaction chimique de combustion qui ne peut se produire que si l’on
-réunit trois éléments : {"\n"}
-{"\n"}
+          <Text style={styles.description}> 
+•  Elle se compose de deux parties, chambre de détente et chambre à tubix :{"\n"}
 
-→ Un combustible : C’est le fuel pulvérisé en fines gouttelettes par l’intermédiaire
-d’un brûleur. {"\n"}
-{"\n"}
-→  Un comburant : C’est l’air primaire injecté par un ventilateur VRB, qui donne
-naissance à l’oxygène nécessaire à la combustion.{"\n"}
-{"\n"}
-→ Une énergie d’activation : assurer par une torche.
+<Text style={styles.namee}>→	Chambre de détente :
+{"\n"}</Text>
+
+ C’est l’élément qui vient juste après la virole, sa longueur est supérieure au diamètre du tube sécheur, ce qui entraîne la diminution de la vitesse de la masse gazeuse et par conséquent une perte d’aptitude des grosses particules, alors que les particules fines s’échappent et continuent leur chemin vers les tubix.{"\n"}
+
+<Text style={styles.namee}>→   Chambre à tubix :{"\n"}
+</Text>
+Elle est constituée des cyclones qui permettent de freiner et récupérer sous l’effet de centrifugation les particules fines.{"\n"}
+
+
+
+
+
+ 
+
+
+  
+</Text>
+
+            <Text style={styles.description}>
+            
+
             </Text>
-          
-<TouchableHighlight 
+    
+          <TouchableHighlight 
                 style ={{
                     height: 60,
                     width:60,
                     borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :335,
+                    marginLeft :325,
                     marginRight:20,
-                    marginTop :5
+                    marginTop :-40
                 }}>
             <Button
-             title=' ►'
+             title=' exit '
              alignItems='center'
                onPress={PressHandler}
 
@@ -81,6 +81,7 @@ naissance à l’oxygène nécessaire à la combustion.{"\n"}
               
                        />
                </TouchableHighlight>
+
         </View>
       </View>
  
@@ -108,7 +109,7 @@ const styles = StyleSheet.create({
     fontSize:18,
     marginLeft:0,
     marginRight:0,
-    marginTop:0,
+    marginTop:50,
     color:'darkgreen',
     backgroundColor: "transparent",
     textDecorationLine: "underline",
@@ -116,10 +117,21 @@ const styles = StyleSheet.create({
     
     fontWeight:'bold',
   },
+  namee:{
+    fontSize:16,
+    marginLeft:0,
+    marginRight:0,
+    marginTop:0,
+    color:'darkgreen',
+    backgroundColor: "transparent",
+
+    
+    fontWeight:'bold',
+  },
   image: {
-    width: 400,
-    height: 200,
-    marginLeft: 0,
+    width: 390,
+    height: 300,
+    marginLeft: 5,
     marginTop:-60,
     
   },
@@ -130,7 +142,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
     textAlign: 'left',
     color: "black",
-    marginTop:10,
+    marginTop:0,
     fontStyle:'italic',
   },
   imagee:{

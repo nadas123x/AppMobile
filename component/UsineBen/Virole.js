@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text,ScrollView,ImageBackground,TouchableHighlight,Button, Image } from "react-native";
 
-export default function Usi({navigation}) {
+export default function Virole({navigation}) {
     
   const PressHandler = () => {
-    navigation.navigate('Usii')
+    navigation.navigate('Usiii')
   }
   return (
     <ScrollView>
@@ -15,60 +15,64 @@ export default function Usi({navigation}) {
     />
         <View style={styles.rect2}>
          
-          <Text style={styles.description}>
-          {"\n"}   • Cette usine est constitué de plusieurs unités qui fonctionnent
-de façon liée, et les éléments de chaque de chaque unité sont
-en double pour assurer la continuité de service.
-{"\n"}
-          {"\n"}
-             </Text>
+       
        
          
           <Text style={styles.description}> 
-          <Text style={styles.name}>	→ Unité de stockage du phosphate humide: {"\n"} </Text>
-          {"\n"}
-          {"\n"}
-          •    Cette unité assure la fonction de la réception du phosphate
-humide provenant de la laverie , du criblage et du parc
-Elwafi . Elle est équipée de : Quatre machines de stockage
- et de deux machines de déstockage.{"\n"}
+         
+<Text style={styles.name}>3) La virole ( tube sécheur ):{"\n"}</Text>
+{"\n"}
+
+•   C’est un tube cylindrique de 25m de longueur et de 1.70m de diamètre, tournant avec une vitesse de rotation constante de 8 tours/min, équipée avec des augets et des palettes tout le long de sa paroi interne, dont :{"\n"}
 {"\n"}
 
 
-<Text style={styles.name}>	→ Unité de stockage du fuel : {"\n"} </Text>
-{"\n"}
-          {"\n"}
+<Text style={styles.namee}>→ 	Les augets :
 
-          •   Cette unité est destinée à la réception et le stockage du fuel
-dans des réservoirs qui alimentent les chaudières et les fours
-sécheurs.{"\n"}
+{"\n"}</Text>
 {"\n"}
 
+ •  Permettent de faire tomber le produit en pluie pour augmenter la surface d’échange thermique entre ce dernier et la masse gazeuse.{"\n"}
 
-<Text style={styles.name}>	→ Unité de chaufferie : {"\n"} </Text>
 {"\n"}
-          {"\n"}
 
-          •   C’est là où on la chaudière qui produit la vapeur chaude à
-partir de l’eau déminéralisée. La vapeur permet de
-réchauffer le fuel , la température à
-laquelle il sera injecté dans le four.{"\n"}
+
+<Text style={styles.namee}>→ 	Les palettes :
+
+{"\n"}</Text>
+
 {"\n"}
-        
 
+
+ •  Permettent l’acheminement du produit vers l’extérieur.{"\n"}
+
+
+
+
+    
+ 
+
+
+  
 </Text>
-<TouchableHighlight 
+
+            <Text style={styles.description}>
+            
+
+            </Text>
+            <TouchableHighlight 
                 style ={{
                     height: 60,
-                    width:60,
+                    width:70,
                     borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :305,
+                    marginLeft :325,
                     marginRight:20,
-                    marginTop :18
+                    marginTop :260
+                
                 }}>
             <Button
-             title=' ►'
+             title=' exit '
              alignItems='center'
                onPress={PressHandler}
 
@@ -76,6 +80,14 @@ laquelle il sera injecté dans le four.{"\n"}
               
                        />
                </TouchableHighlight>
+            <Image
+ source={require('../../assets/virole.jpg')}
+  resizeMode="contain"
+            style={styles.image}
+          ></Image>
+        
+        
+
         </View>
       </View>
  
@@ -106,14 +118,29 @@ const styles = StyleSheet.create({
     marginTop:0,
     color:'darkgreen',
     backgroundColor: "transparent",
+    textDecorationLine: "underline",
+
     
     fontWeight:'bold',
   },
   image: {
     width: 400,
-    height: 314,
-    marginTop: -20,
-    marginLeft: 2
+    height: 300,
+    marginLeft: 0,
+    marginTop:320,
+    position:'absolute'
+    
+  },
+   namee:{
+    fontSize:16,
+    marginLeft:0,
+    marginRight:0,
+    marginTop:0,
+    color:'darkgreen',
+    backgroundColor: "transparent",
+
+    
+    fontWeight:'bold',
   },
   description:{
     fontSize:14,

@@ -51,7 +51,7 @@ export default class Posts extends Component {
       this.props.navigation.navigate('News',{actualite})
     }
     if(idMenu==2){
-      this.props.navigation.navigate('SB')
+      this.props.navigation.navigate('Pho')
     }
     if(idMenu==3){
       this.props.navigation.navigate('Prrop')

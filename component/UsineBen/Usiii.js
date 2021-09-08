@@ -7,19 +7,19 @@ export default function Usiii({navigation}) {
     navigation.navigate('Foyer')
   }
   const PressHandler2 = () => {
-    navigation.navigate('Usine')
+    navigation.navigate('Buse')
   }
   const PressHandler3 = () => {
-    navigation.navigate('Foyer')
+    navigation.navigate('Virole')
   }
   const PressHandler4 = () => {
-    navigation.navigate('Usine')
+    navigation.navigate('Chambre')
   }
   const PressHandler5 = () => {
-    navigation.navigate('Usine')
+    navigation.navigate('Filtre')
   }
   const PressHandler6 = () => {
-    navigation.navigate('Usine')
+    navigation.navigate('Cheminee')
   }
   return (
     <ScrollView>
@@ -223,6 +223,7 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     color: "black",
     marginTop:30,
+    fontStyle:'italic',
   },
   imagee:{
     width: '100%',

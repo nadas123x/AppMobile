@@ -15,6 +15,14 @@ import Usi from '../UsineBen/Usi';
 import Usii from '../UsineBen/Usii';
 import Usiii from '../UsineBen/Usiii';
 import Foyer from '../UsineBen/Foyer';
+import Foyer1 from '../UsineBen/Foyer1';
+import Buse from '../UsineBen/Buse';
+import Virole from '../UsineBen/Virole';
+import Chambre from '../UsineBen/Chambre';
+import Filtre from '../UsineBen/Filtre';
+import Cheminee from '../UsineBen/Cheminee';
+import Pho from '../Propos/Pho';
+
 const screens={
   
 
@@ -67,6 +75,27 @@ screen:Prr
   },
   Foyer:{
     screen: Foyer
+  },
+  Foyer1:{
+    screen: Foyer1
+  },
+  Buse:{
+    screen: Buse
+  },
+  Virole:{
+    screen: Virole
+  },
+  Chambre:{
+    screen: Chambre
+  },
+  Filtre:{
+    screen: Filtre
+  },
+  Cheminee:{
+    screen: Cheminee
+  },
+  Pho:{
+    screen: Pho
   },
     Animation:{
         screen:Animation,
