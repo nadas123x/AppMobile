@@ -4,7 +4,7 @@ import { ImageBackground, TouchableHighlight, Image, StyleSheet, Text, View, But
 
 export default function SB({ navigation }) {
   const PressHandler = () => {
-    navigation.navigate('Actu')
+    navigation.navigate('Animation')
   }
   return (
 
