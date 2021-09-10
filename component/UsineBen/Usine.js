@@ -39,11 +39,9 @@ diminue à un pourcentage qui ne dépasse pas 2%.
                 style ={{
                     height: 60,
                     width:60,
-                    borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :305,
-                    marginRight:20,
-                    marginTop :18
+                    marginLeft :'75%',
+                    marginTop :'7%'
                 }}>
             <Button
              title=' ►'
@@ -69,10 +67,11 @@ const styles = StyleSheet.create({
   rect2: {
     width:420,
     height: 696,
-    backgroundColor: "white",
-    marginTop: 45,
-    marginLeft: 2,
-    
+    backgroundColor: "rgba(208,213,214,0.66)",
+    marginTop: '10%',
+    marginLeft: '1%',
+        marginRight: '1%',
+
     
 
    
@@ -80,9 +79,8 @@ const styles = StyleSheet.create({
   name:{
     fontSize:19,
     textDecorationLine: "underline",
-    marginLeft:50,
-    marginRight:20,
-    marginTop:0,
+    marginLeft:'15%',
+    marginTop:'1%',
     color:'darkgreen',
     backgroundColor: "transparent",
     
@@ -91,17 +89,17 @@ const styles = StyleSheet.create({
   image: {
     width: 400,
     height: 314,
-    marginTop: -20,
-    marginLeft: 2
+    marginTop: '1%',
+    marginLeft: '1%'
   },
   description:{
     fontSize:13,
     fontWeight:'800',
     marginLeft: 0,
-    marginRight: 10,
+    marginRight:'5%',
     textAlign: 'left',
     color: "black",
-    marginTop:30,
+    marginTop:'6%',
     fontStyle:'italic',
   },
   imagee:{

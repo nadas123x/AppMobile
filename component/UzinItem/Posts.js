@@ -22,12 +22,11 @@ export default class Posts extends Component {
       data: [
         {id:1, title: "Actualités",   
 
-                         image:"http://fnh.ma//uploads/actualites/60a6683edaab0.jpg"},
-        {id:2, title: "",           image:"https://www.agrimaroc.ma/wp-content/uploads/phosphates-ocp-premier-exportateur-660x330.jpg"} ,
-        {id:3, title: " ",             image:"https://www.agrimaroc.ma/wp-content/uploads/OCP-2.jpg"}, 
-        {id:4, title: "",           image:"https://corpo.ocpgroup.ma/sites/default/files/styles/optimized/public/2019-03/20160309_AFC_JORF_92.jpg?itok=aPuXq3tB"}, 
-        {id:5, title: "",             image:"https://www.agrijob.ma/wp-content/uploads/2018/06/OCP-logo.jpg"}, 
-        {id:6, title: "Merci de laisser un commentaire",          image:"https://wallpaperaccess.com/full/2091341.jpg"}, 
+                         image:"https://imagizer.imageshack.com/v2/1024x768q90/922/Qx0r0H.png"},
+        {id:2, title: "",           image:"https://imagizer.imageshack.com/img922/7228/oT9Gm9.png"} ,
+        {id:3, title: " ",             image:"https://imagizer.imageshack.com/v2/800x600q90/922/Qx0r0H.png"}, 
+        {id:4, title: "",           image:"https://imagizer.imageshack.com/v2/320x240q90/922/Qx0r0H.png"}, 
+        {id:6, title: "",          image:"https://imagizer.imageshack.com/v2/1024x768q90/924/eOM6aa.png"}, 
       
       
       ]
@@ -125,13 +124,13 @@ export default class Posts extends Component {
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    marginTop:5,
+    marginTop:20,
   },
   list: {
     backgroundColor:"#E6E6E6",
   },
   separator: {
-    marginTop: 6,
+    marginTop: 9,
   },
   /******** card **************/
   card:{
@@ -189,5 +188,9 @@ const styles = StyleSheet.create({
     height:30,
 
   },
+  image:{
+    width:80,
+    height:90,
+  }
  
 });  

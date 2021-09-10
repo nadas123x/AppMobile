@@ -71,9 +71,8 @@ cheminée. {"\n"}
                     width:70,
                     borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :325,
-                    marginRight:20,
-                    marginTop :-25
+                    marginLeft :'75%',
+                    marginTop :'-6%'
                 }}>
             <Button
              title=' exit '
@@ -102,8 +101,8 @@ const styles = StyleSheet.create({
     width:420,
     height: 696,
     backgroundColor: "rgba(208,213,214,0.66)",
-    marginTop: 45,
-    marginLeft: 4,
+    marginTop: '10%',
+    marginLeft: '1%',
     
     
 
@@ -124,8 +123,8 @@ const styles = StyleSheet.create({
   image: {
     width: 500,
     height: 230,
-    marginLeft: -50,
-    marginTop:-60,
+    marginLeft: '-11%',
+    marginTop:'-15%',
     
   },
   description:{

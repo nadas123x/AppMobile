@@ -22,7 +22,14 @@ import Chambre from '../UsineBen/Chambre';
 import Filtre from '../UsineBen/Filtre';
 import Cheminee from '../UsineBen/Cheminee';
 import Pho from '../Propos/Pho';
-
+import Phoo from '../Propos/Phoo';
+import Phooo from '../Propos/Phooo';
+import Foration from '../Propos/Foration';
+import Sautage from '../Propos/Sautage';
+import Décapage from '../Propos/Décapage';
+import Defruitage from '../Propos/Defruitage';
+import Transport from '../Propos/Transport';
+import Epierage from '../Propos/Epierage';
 const screens={
   
 
@@ -96,6 +103,31 @@ screen:Prr
   },
   Pho:{
     screen: Pho
+  },
+  Phoo:{
+    screen: Phoo
+  },
+   Phooo:{
+    screen: Phooo
+  },
+  Foration:{
+    screen: Foration
+  },
+  Sautage:{
+    screen: Sautage
+  },
+  Décapage:{
+    screen: Décapage
+  },
+ 
+  Defruitage:{
+    screen: Defruitage
+  },
+  Transport:{
+    screen: Transport
+  },
+  Epierage:{
+    screen: Epierage
   },
     Animation:{
         screen:Animation,

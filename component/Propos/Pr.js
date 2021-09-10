@@ -35,10 +35,10 @@
            <Ellipse
              strokeWidth={1}
              fill="rgba(255,255,255,1)"
-             cx={410}
-             cy={465}
-             rx={489}
-             ry={435}
+             cx={'41%'}
+            cy={'51%'}
+            rx={'50%'}
+            ry={'50%'}
            ></Ellipse>
          </Svg>
            <View style={styles.header}>
@@ -106,9 +106,8 @@ fertilisants : le phosphore et l’azote) et le NPK (engrais ternaire ).
                      width:60,
                      borderRadius:80,
                      backgroundColor : "white",
-                     marginLeft :305,
-                     marginRight:20,
-                     marginTop :60
+                     marginLeft :'75%',
+                     marginTop :'10%'
                  }}>
              <Button
               title=' ►'
@@ -164,15 +163,7 @@ fertilisants : le phosphore et l’azote) et le NPK (engrais ternaire ).
      justifyContent: 'flex-end',
      alignItems: 'flex-end',
    },
-   header:{
-     marginTop:70,
-     padding:0,
-     borderRadius:80,
-     
-     fontWeight:'bold',
-     borderRadius:80,
-     
-   },
+   
    
  
    image:{
@@ -183,11 +174,6 @@ fertilisants : le phosphore et l’azote) et le NPK (engrais ternaire ).
  
  
    },
-   name:{
-     fontSize:22,
-     color:"#FFFFFF",
-     fontWeight:'600',
-   },
   
    secTitle:{
     fontSize:15,
@@ -195,25 +181,24 @@ fertilisants : le phosphore et l’azote) et le NPK (engrais ternaire ).
     textDecorationLine: "underline",
     color:"darkseagreen",
     marginLeft:120,
-    marginTop:5,
+    marginTop:'6%',
    },
    postTitle:{
      fontSize:20,
      fontWeight:"bold",
      textDecorationLine: "underline",
-     marginLeft:200,
-     marginTop:10,
+     marginLeft:'50%',
+     marginTop:'8%',
      color:'olive',
      backgroundColor: "transparent",
      padding: 0,
    
-     borderRadius: 30
    
    },
    postDescription:{
      fontSize:14,
-     marginTop:20,
-     marginLeft:50,
+     marginTop:'5%',
+     marginLeft:'15%',
    },
  
   

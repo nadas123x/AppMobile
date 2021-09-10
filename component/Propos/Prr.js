@@ -20,7 +20,7 @@ import React, { Component,useEffect,useFocusEffect } from 'react';
    
  
    const PressHandler = () => {
-     navigation.navigate('SB')
+     navigation.navigate('Posts')
    }
      return (
        <ScrollView>
@@ -34,10 +34,10 @@ import React, { Component,useEffect,useFocusEffect } from 'react';
            <Ellipse
              strokeWidth={1}
              fill="rgba(255,255,255,1)"
-             cx={410}
-             cy={465}
-             rx={489}
-             ry={435}
+            cx={'41%'}
+            cy={'51%'}
+            rx={'50%'}
+            ry={'50%'}
            ></Ellipse>
          </Svg>
            <View style={styles.header}>
@@ -121,14 +121,12 @@ Ouverture de bureaux en Argentine et au Brésil. {"\n"}
                  style ={{
                      height: 60,
                      width:60,
-                     borderRadius:80,
                      backgroundColor : "white",
-                     marginLeft :305,
-                     marginRight:20,
-                     marginTop :0
+                     marginLeft :'79%',
+                     marginTop :'-6%'
                  }}>
              <Button
-              title=' ►'
+              title=' EXIT'
               alignItems='center'
                 onPress={PressHandler}
  
@@ -175,16 +173,6 @@ Ouverture de bureaux en Argentine et au Brésil. {"\n"}
    },
   
    
-   header:{
-     marginTop:70,
-     padding:2,
-     borderRadius:80,
-     
-     fontWeight:'bold',
-     borderRadius:80,
-     
-   },
-   
  
    image:{
      width: '100%',
@@ -194,30 +182,25 @@ Ouverture de bureaux en Argentine et au Brésil. {"\n"}
  
  
    },
-   name:{
-     fontSize:22,
-     color:"#FFFFFF",
-     fontWeight:'600',
-   },
+   
   
    secTitle:{
     fontSize:17,
     fontWeight:"bold",
     color:"darkseagreen",
-    marginLeft:120,
-    marginTop:5,
+    marginLeft:'40%',
+    marginTop:'-3%',
    },
    postTitle:{
      fontSize:20,
      fontWeight:"bold",
      textDecorationLine: "underline",
-     marginLeft:150,
-     marginTop:20,
+     marginLeft:'30%',
+     marginTop:'22%',
      color:'olive',
      backgroundColor: "transparent",
      padding: 0,
    
-     borderRadius: 30
    
    },
    postDescription:{

@@ -68,9 +68,8 @@ naissance à l’oxygène nécessaire à la combustion.{"\n"}
                     width:60,
                     borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :335,
-                    marginRight:20,
-                    marginTop :5
+                    marginLeft :'78%',
+                    marginTop :'3%'
                 }}>
             <Button
              title=' ►'
@@ -97,8 +96,8 @@ const styles = StyleSheet.create({
     width:420,
     height: 696,
     backgroundColor: "rgba(208,213,214,0.66)",
-    marginTop: 45,
-    marginLeft: 4,
+    marginTop: '10%',
+    marginLeft: '1%',
     
     
 
@@ -120,14 +119,14 @@ const styles = StyleSheet.create({
     width: 400,
     height: 200,
     marginLeft: 0,
-    marginTop:-60,
+    marginTop:'-15%',
     
   },
   description:{
     fontSize:14,
     fontWeight:'800',
     marginLeft: 0,
-    marginRight: 10,
+    marginRight: '1%',
     textAlign: 'left',
     color: "black",
     marginTop:10,

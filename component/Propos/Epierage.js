@@ -16,11 +16,11 @@ import {
   ScrollView
 } from 'react-native';
 
-export default function Prrop( {navigation}){
+export default function Foration( {navigation}){
   
 
   const PressHandler = () => {
-    navigation.navigate('Pr')
+    navigation.navigate('Phooo')
   }
     return (
       <ScrollView>
@@ -55,26 +55,29 @@ export default function Prrop( {navigation}){
          
           <View style={styles.postContent}>
               <Text style={styles.postTitle}>
-                    Présentation:
+           L'épierage et la mise en stock :
+
               </Text>
               
 
               <Text style={styles.postDescription}>
-             •    Un des leaders mondiaux sur le marché du phosphate et ses
-dérivés, OCP opère sur les cinq continents et dispose des plus
-importantes réserves de phosphate au monde. Avec plus de 90 ans
-d’expérience dans la mine et 45 ans en chimie, OCP offre l’une
-des plus larges gammes de roche pour divers usages. Premier
-exportateur de phosphate brut et d’acide phosphorique dans le
-monde et l’un des principaux exportateurs d’engrais phosphatés,
-OCP joue un rôle central dans ses régions d’implantation et
-emploie directement près de 20 000 personnes ce qui le place dans
-le peloton de tête des plus grands employeurs du Royaume.
-Première entreprise industrielle du Maroc, OCP contribue
-substantiellement au développement de l’économie nationale par
-le biais de ses exportations .En
-outre, OCP apporte un soutien indéfectible à l’agriculture
-marocaine en général et aux PME en particulier.
+           •     Cette opération close le cycle de la chaîne cinématique. Elle consiste à un simple traitement du BPL qu’on peut le résumer dans les étapes suivantes :{"\n"}
+           {"\n"}
+>  Dépôts du phosphate dans les trémies.{"\n"}
+{"\n"}
+>  Passage par l’extracteur métallique.{"\n"}
+{"\n"}
+>  Epierrage sur le crible de maille 90*90 mm2.{"\n"}
+{"\n"}
+>  Le passant convoyé au stock.{"\n"}
+
+
+{"\n"}
+{"\n"}
+
+
+
+
 
 
 
@@ -82,19 +85,25 @@ marocaine en général et aux PME en particulier.
 
 
               </Text>
-            
-
+            <Image
+ source={require('../../assets/epir.png')}
+  resizeMode="contain"
+            style={styles.imagee}
+          ></Image>
+ <Text style={styles.postDescription1}>
+  
+              </Text>
               <TouchableHighlight 
                 style ={{
                     height: 60,
-                    width:60,
+                    width:80,
                     borderRadius:80,
                     backgroundColor : "white",
                     marginLeft :'75%',
-                    marginTop :'20%'
+                    marginTop :'0%'
                 }}>
             <Button
-             title=' ►'
+             title=' exit'
              alignItems='center'
                onPress={PressHandler}
 
@@ -146,7 +155,14 @@ const styles = StyleSheet.create({
  
   
   
-  
+  post:{
+fontSize:15,
+    fontWeight:"bold",
+    marginLeft:'45%',
+    marginTop:'24%',
+    color:'olive',
+    backgroundColor: "transparent",
+  },
 
   image:{
     width: '100%',
@@ -159,8 +175,10 @@ const styles = StyleSheet.create({
   
   
   imagee:{
-      width: '100%',
-      height: '100%',
+      width: 385,
+      height: 220,
+       marginLeft:'4%',
+    marginTop:'91%',
       resizeMode: 'cover',
       position: 'absolute',
   
@@ -171,30 +189,29 @@ const styles = StyleSheet.create({
     fontSize:20,
     fontWeight:"bold",
     textDecorationLine: "underline",
-    marginLeft:'45%',
-    marginTop:'24%',
+    marginLeft:'55%',
+    marginTop:'12%',
     color:'olive',
     backgroundColor: "transparent",
   
   },
   postDescription:{
     fontSize:14,
-    marginTop:'20%',
-    marginLeft:'5%',
+    marginTop:'5%',
+    marginLeft:'21%',
     backgroundColor: "transparent",
 fontStyle:'italic'
   },
 
- 
+ postDescription1:{
+    fontSize:14,
+    marginTop:'65%',
+    marginLeft:'15%',
+    backgroundColor: "transparent",
+fontStyle:'italic'
+  },
  
   
-  name:{
-    fontSize:22,
-    color:"#00BFFF",
-    fontWeight:'600',
-    alignSelf:'center',
-    marginLeft:'10%'
-  }, 
+ 
   
 });
- 

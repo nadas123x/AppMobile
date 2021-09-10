@@ -61,11 +61,9 @@ laquelle il sera injecté dans le four.{"\n"}
                 style ={{
                     height: 60,
                     width:60,
-                    borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :305,
-                    marginRight:20,
-                    marginTop :18
+                    marginLeft :'76%',
+                    marginTop :'3%'
                 }}>
             <Button
              title=' ►'
@@ -92,8 +90,8 @@ const styles = StyleSheet.create({
     width:420,
     height: 696,
     backgroundColor: "rgba(208,213,214,0.66)",
-    marginTop: 45,
-    marginLeft: 4,
+    marginTop: '10%',
+    marginLeft: '1%',
     
     
 
@@ -112,17 +110,15 @@ const styles = StyleSheet.create({
   image: {
     width: 400,
     height: 314,
-    marginTop: -20,
-    marginLeft: 2
+    marginTop: '1%',
   },
   description:{
     fontSize:14,
     fontWeight:'800',
-    marginLeft: 0,
-    marginRight: 10,
+    marginRight: '5%',
     textAlign: 'left',
     color: "black",
-    marginTop:10,
+    marginTop:'2%',
     fontStyle:'italic',
   },
   imagee:{

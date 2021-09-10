@@ -59,9 +59,8 @@ phosphate n’est pas accepté par les clients.
                     width:60,
                     borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :305,
-                    marginRight:20,
-                    marginTop :18
+                    marginLeft :'75%',
+                    marginTop :'5%'
                 }}>
             <Button
              title=' ►'
@@ -88,8 +87,8 @@ const styles = StyleSheet.create({
     width:420,
     height: 696,
     backgroundColor: "rgba(208,213,214,0.66)",
-    marginTop: 45,
-    marginLeft: 4,
+    marginTop: '8%',
+    marginLeft: '1%',
     
     
 
@@ -115,10 +114,10 @@ const styles = StyleSheet.create({
     fontSize:14,
     fontWeight:'800',
     marginLeft: 0,
-    marginRight: 10,
+    marginRight: '5%',
     textAlign: 'left',
     color: "black",
-    marginTop:10,
+    marginTop:'1%',
     fontStyle:'italic',
   },
   imagee:{

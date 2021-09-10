@@ -66,10 +66,9 @@ phosphate vers le stock du rejet.
                     width:70,
                     borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :325,
-                    marginRight:20,
-                    marginTop :40
-                }}>
+                    marginLeft :'75%',
+                    marginTop :'10%'
+               }}>
             <Button
              title=' exit '
              alignItems='center'
@@ -95,8 +94,8 @@ const styles = StyleSheet.create({
     width:420,
     height: 696,
     backgroundColor: "rgba(208,213,214,0.66)",
-    marginTop: 45,
-    marginLeft: 4,
+    marginTop: '10%',
+    marginLeft: '1%',
     
     
 
@@ -117,8 +116,8 @@ const styles = StyleSheet.create({
   image: {
     width: 500,
     height: 250,
-    marginLeft: -10,
-    marginTop:-60,
+    marginLeft: '0%',
+    marginTop:'-15%',
     
   },
   description:{
@@ -128,7 +127,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
     textAlign: 'left',
     color: "black",
-    marginTop:10,
+    marginTop:'1%',
     fontStyle:'italic',
   },
   imagee:{

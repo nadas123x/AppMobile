@@ -68,9 +68,9 @@ Elle est constituée des cyclones qui permettent de freiner et récupérer sous 
                     width:60,
                     borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :325,
+                    marginLeft :'80%',
                     marginRight:20,
-                    marginTop :-40
+                    marginTop :'-9%'
                 }}>
             <Button
              title=' exit '
@@ -98,8 +98,8 @@ const styles = StyleSheet.create({
     width:420,
     height: 696,
     backgroundColor: "rgba(208,213,214,0.66)",
-    marginTop: 45,
-    marginLeft: 4,
+    marginTop: '10%',
+    marginLeft:'1%',
     
     
 
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     fontSize:18,
     marginLeft:0,
     marginRight:0,
-    marginTop:50,
+    marginTop:'10%',
     color:'darkgreen',
     backgroundColor: "transparent",
     textDecorationLine: "underline",
@@ -131,15 +131,14 @@ const styles = StyleSheet.create({
   image: {
     width: 390,
     height: 300,
-    marginLeft: 5,
-    marginTop:-60,
+    marginLeft: '1%',
+    marginTop:'-15%',
     
   },
   description:{
     fontSize:14,
     fontWeight:'800',
     marginLeft: 0,
-    marginRight: 10,
     textAlign: 'left',
     color: "black",
     marginTop:0,

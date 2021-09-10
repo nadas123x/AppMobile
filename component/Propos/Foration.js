@@ -16,11 +16,11 @@ import {
   ScrollView
 } from 'react-native';
 
-export default function Prrop( {navigation}){
+export default function Foration( {navigation}){
   
 
   const PressHandler = () => {
-    navigation.navigate('Pr')
+    navigation.navigate('Phooo')
   }
     return (
       <ScrollView>
@@ -55,26 +55,16 @@ export default function Prrop( {navigation}){
          
           <View style={styles.postContent}>
               <Text style={styles.postTitle}>
-                    Présentation:
+           La foration :
+
               </Text>
               
 
               <Text style={styles.postDescription}>
-             •    Un des leaders mondiaux sur le marché du phosphate et ses
-dérivés, OCP opère sur les cinq continents et dispose des plus
-importantes réserves de phosphate au monde. Avec plus de 90 ans
-d’expérience dans la mine et 45 ans en chimie, OCP offre l’une
-des plus larges gammes de roche pour divers usages. Premier
-exportateur de phosphate brut et d’acide phosphorique dans le
-monde et l’un des principaux exportateurs d’engrais phosphatés,
-OCP joue un rôle central dans ses régions d’implantation et
-emploie directement près de 20 000 personnes ce qui le place dans
-le peloton de tête des plus grands employeurs du Royaume.
-Première entreprise industrielle du Maroc, OCP contribue
-substantiellement au développement de l’économie nationale par
-le biais de ses exportations .En
-outre, OCP apporte un soutien indéfectible à l’agriculture
-marocaine en général et aux PME en particulier.
+           •      Elle consiste à forer des troues de diamètres 9’’ = 228 mm, ce choix permet d’avoir une énergie importante dégagée par l’explosif. Ces derniers serviront des loges pour les charges explosives, et leur profondeur dépend de celle du niveau phosphaté.
+
+
+
 
 
 
@@ -82,19 +72,32 @@ marocaine en général et aux PME en particulier.
 
 
               </Text>
-            
-
+            <Image
+ source={require('../../assets/Fora.jpg')}
+  resizeMode="contain"
+            style={styles.imagee}
+          ></Image>
+ <Text style={styles.postDescription1}>
+  •   Il s’agit d’enfoncer une tige dans le sol et de la retirer jusqu’à atteindre le niveau voulu. Les trois principales méthodes de foration sont :{"\n"}
+{"\n"}
+>  Foration par percussion .{"\n"}
+{"\n"}
+>  Foration par rotation .{"\n"}
+{"\n"}
+>  Foration par roto percussion.{"\n"}
+{"\n"}
+              </Text>
               <TouchableHighlight 
                 style ={{
                     height: 60,
-                    width:60,
+                    width:80,
                     borderRadius:80,
                     backgroundColor : "white",
                     marginLeft :'75%',
-                    marginTop :'20%'
+                    marginTop :'0%'
                 }}>
             <Button
-             title=' ►'
+             title=' exit'
              alignItems='center'
                onPress={PressHandler}
 
@@ -146,7 +149,14 @@ const styles = StyleSheet.create({
  
   
   
-  
+  post:{
+fontSize:15,
+    fontWeight:"bold",
+    marginLeft:'45%',
+    marginTop:'24%',
+    color:'olive',
+    backgroundColor: "transparent",
+  },
 
   image:{
     width: '100%',
@@ -159,8 +169,10 @@ const styles = StyleSheet.create({
   
   
   imagee:{
-      width: '100%',
-      height: '100%',
+      width: 305,
+      height: 360,
+       marginLeft:'20%',
+    marginTop:'64%',
       resizeMode: 'cover',
       position: 'absolute',
   
@@ -172,29 +184,28 @@ const styles = StyleSheet.create({
     fontWeight:"bold",
     textDecorationLine: "underline",
     marginLeft:'45%',
-    marginTop:'24%',
+    marginTop:'14%',
     color:'olive',
     backgroundColor: "transparent",
   
   },
   postDescription:{
     fontSize:14,
-    marginTop:'20%',
-    marginLeft:'5%',
+    marginTop:'8%',
+    marginLeft:'15%',
     backgroundColor: "transparent",
 fontStyle:'italic'
   },
 
- 
+ postDescription1:{
+    fontSize:14,
+    marginTop:'65%',
+    marginLeft:'15%',
+    backgroundColor: "transparent",
+fontStyle:'italic'
+  },
  
   
-  name:{
-    fontSize:22,
-    color:"#00BFFF",
-    fontWeight:'600',
-    alignSelf:'center',
-    marginLeft:'10%'
-  }, 
+ 
   
 });
- 

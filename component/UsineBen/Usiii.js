@@ -66,9 +66,8 @@ extra-fines sont dissipées à travers la cheminée par les ventilateurs de tira
                     width:30,
                     borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :75,
-                    marginRight:20,
-                    marginTop :-230
+                    marginLeft :'18%',
+                    marginTop :'-55%'
                 }}>
             <Button
              title=' 1'
@@ -85,9 +84,8 @@ extra-fines sont dissipées à travers la cheminée par les ventilateurs de tira
                     width:30,
                     borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :128,
-                    marginRight:40,
-                    marginTop :-80
+                    marginLeft :'30%',
+                    marginTop :'-19%'
                     
                 }}>
             <Button
@@ -105,9 +103,8 @@ extra-fines sont dissipées à travers la cheminée par les ventilateurs de tira
                     width:60,
                     borderRadius:80,
                     backgroundColor : "darkgreen",
-                    marginLeft :175,
-                    marginRight:20,
-                    marginTop :-91
+                    marginLeft :'42%',
+                    marginTop :'-21%'
                 }}>
             <Button
              title=' 3'
@@ -124,9 +121,8 @@ extra-fines sont dissipées à travers la cheminée par les ventilateurs de tira
                     width:55,
                     borderRadius:80,
                     backgroundColor : "darkgreen",
-                    marginLeft :256,
-                    marginRight:20,
-                    marginTop :-31
+                    marginLeft :'60%',
+                    marginTop :'-7%'
                 }}>
             <Button
              title=' 4'
@@ -143,9 +139,8 @@ extra-fines sont dissipées à travers la cheminée par les ventilateurs de tira
                     width:50,
                     borderRadius:80,
                     backgroundColor : "darkgreen",
-                    marginLeft :320,
-                    marginRight:20,
-                    marginTop :-45
+                    marginLeft :'77%',
+                    marginTop :'-10%'
                 }}>
             <Button
              title=' 5'
@@ -162,9 +157,9 @@ extra-fines sont dissipées à travers la cheminée par les ventilateurs de tira
                     width:45,
                     borderRadius:80,
                     backgroundColor : "darkgreen",
-                    marginLeft :366,
-                    marginRight:20,
-                    marginTop :60
+                    marginLeft :'88%',
+                   
+                    marginTop :'15%'
                 }}>
             <Button
              title=' 6'
@@ -201,8 +196,8 @@ const styles = StyleSheet.create({
   name:{
     fontSize:19,
     textDecorationLine: "underline",
-    marginLeft:50,
-    marginRight:20,
+    marginLeft:'5%',
+    marginRight:'2%',
     marginTop:0,
     color:'darkgreen',
     backgroundColor: "transparent",
@@ -212,14 +207,14 @@ const styles = StyleSheet.create({
   image: {
     width: 450,
     height: 400,
-    marginTop: -40,
-    marginLeft: 2
+    marginTop: '-10%',
+    marginLeft: '1%'
   },
   description:{
     fontSize:13,
     fontWeight:'800',
     marginLeft: 0,
-    marginRight: 10,
+    marginRight: '1%',
     textAlign: 'left',
     color: "black",
     marginTop:30,

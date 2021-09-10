@@ -59,9 +59,8 @@ chaleur entre le foyer et la virole.
                     width:70,
                     borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :325,
-                    marginRight:20,
-                    marginTop :40
+                    marginLeft :'75%',
+                    marginTop :'15%'
                 }}>
             <Button
              title=' exit '
@@ -88,8 +87,8 @@ const styles = StyleSheet.create({
     width:420,
     height: 696,
     backgroundColor: "rgba(208,213,214,0.66)",
-    marginTop: 45,
-    marginLeft: 4,
+    marginTop: '10%',
+    marginLeft: '1%',
     
     
 
@@ -111,7 +110,7 @@ const styles = StyleSheet.create({
     width: 400,
     height: 300,
     marginLeft: 0,
-    marginTop:-60,
+    marginTop:'-20%',
     
   },
   description:{

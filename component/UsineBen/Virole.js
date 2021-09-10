@@ -60,15 +60,22 @@ export default function Virole({navigation}) {
             
 
             </Text>
-            <TouchableHighlight 
+           
+            <Image
+ source={require('../../assets/virole.jpg')}
+  resizeMode="contain"
+            style={styles.image}
+          ></Image>
+        
+         <TouchableHighlight 
                 style ={{
                     height: 60,
                     width:70,
                     borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :325,
-                    marginRight:20,
-                    marginTop :260
+                    marginLeft :'75%',
+                    marginRight:0,
+                    marginTop :'65%'
                 
                 }}>
             <Button
@@ -80,13 +87,6 @@ export default function Virole({navigation}) {
               
                        />
                </TouchableHighlight>
-            <Image
- source={require('../../assets/virole.jpg')}
-  resizeMode="contain"
-            style={styles.image}
-          ></Image>
-        
-        
 
         </View>
       </View>
@@ -104,8 +104,8 @@ const styles = StyleSheet.create({
     width:420,
     height: 696,
     backgroundColor: "rgba(208,213,214,0.66)",
-    marginTop: 45,
-    marginLeft: 4,
+    marginTop: '10%',
+    marginLeft: '1%',
     
     
 
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     width: 400,
     height: 300,
     marginLeft: 0,
-    marginTop:320,
+    marginTop:'75%',
     position:'absolute'
     
   },
@@ -146,10 +146,9 @@ const styles = StyleSheet.create({
     fontSize:14,
     fontWeight:'800',
     marginLeft: 0,
-    marginRight: 10,
     textAlign: 'left',
     color: "black",
-    marginTop:10,
+    marginTop:'2%',
     fontStyle:'italic',
   },
   imagee:{

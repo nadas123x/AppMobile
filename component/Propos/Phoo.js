@@ -16,19 +16,16 @@ import {
   ScrollView
 } from 'react-native';
 
-export default function Prrop( {navigation}){
+export default function Pho( {navigation}){
   
 
   const PressHandler = () => {
-    navigation.navigate('Pr')
+    navigation.navigate('Phooo')
   }
     return (
       <ScrollView>
         <View style={styles.container}>
-        <ImageBackground
-        source={{uri: 'https://i.pinimg.com/originals/03/02/bc/0302bc613ea56d6e74c6edb151712364.jpg'}}
-        style={styles.imagee}
-    />
+        
         <ImageBackground
         source={{uri: 'https://wallpaperaccess.com/full/2693274.jpg'}}
         style={styles.image}
@@ -55,26 +52,20 @@ export default function Prrop( {navigation}){
          
           <View style={styles.postContent}>
               <Text style={styles.postTitle}>
-                    Présentation:
+               UTILISATION DES PHOSPHATES:
+
               </Text>
               
 
               <Text style={styles.postDescription}>
-             •    Un des leaders mondiaux sur le marché du phosphate et ses
-dérivés, OCP opère sur les cinq continents et dispose des plus
-importantes réserves de phosphate au monde. Avec plus de 90 ans
-d’expérience dans la mine et 45 ans en chimie, OCP offre l’une
-des plus larges gammes de roche pour divers usages. Premier
-exportateur de phosphate brut et d’acide phosphorique dans le
-monde et l’un des principaux exportateurs d’engrais phosphatés,
-OCP joue un rôle central dans ses régions d’implantation et
-emploie directement près de 20 000 personnes ce qui le place dans
-le peloton de tête des plus grands employeurs du Royaume.
-Première entreprise industrielle du Maroc, OCP contribue
-substantiellement au développement de l’économie nationale par
-le biais de ses exportations .En
-outre, OCP apporte un soutien indéfectible à l’agriculture
-marocaine en général et aux PME en particulier.
+             •  Acide phosphorique : traitement des surfaces des métaux, produit de nettoyage, traitement des eaux usés. {"\n"}
+             {"\n"}
+•   Les engrais : organique, chimique, verts.. {"\n"}
+{"\n"}
+•   Aliments pour le bétail
+
+
+
 
 
 
@@ -83,7 +74,16 @@ marocaine en général et aux PME en particulier.
 
               </Text>
             
-
+<Image
+ source={require('../../assets/image.jpg')}
+  resizeMode="contain"
+            style={styles.imagee}
+          ></Image>
+          <Image
+ source={require('../../assets/image1.jpg')}
+  resizeMode="contain"
+            style={styles.imag}
+          ></Image>
               <TouchableHighlight 
                 style ={{
                     height: 60,
@@ -91,7 +91,7 @@ marocaine en général et aux PME en particulier.
                     borderRadius:80,
                     backgroundColor : "white",
                     marginLeft :'75%',
-                    marginTop :'20%'
+                    marginTop :'110%'
                 }}>
             <Button
              title=' ►'
@@ -146,11 +146,19 @@ const styles = StyleSheet.create({
  
   
   
-  
+  post:{
+fontSize:15,
+    fontWeight:"bold",
+    marginLeft:'45%',
+    marginTop:'24%',
+    color:'olive',
+    backgroundColor: "transparent",
+  },
 
   image:{
     width: '100%',
     height: '100%',
+ 
     resizeMode: 'cover',
     position: 'absolute',
 
@@ -159,28 +167,36 @@ const styles = StyleSheet.create({
   
   
   imagee:{
-      width: '100%',
-      height: '100%',
+      width: '60%',
+      height: '5%',
       resizeMode: 'cover',
       position: 'absolute',
-  
+   marginLeft:'5%',
+    marginTop:'80%',
   
     },
-
+imag:{
+      width: '40%',
+      height: '10%',
+      resizeMode: 'cover',
+      position: 'absolute',
+   marginLeft:'45%',
+    marginTop:'130%',
+},
   postTitle:{
     fontSize:20,
     fontWeight:"bold",
     textDecorationLine: "underline",
-    marginLeft:'45%',
-    marginTop:'24%',
+    marginLeft:'35%',
+    marginTop:'15%',
     color:'olive',
     backgroundColor: "transparent",
   
   },
   postDescription:{
     fontSize:14,
-    marginTop:'20%',
-    marginLeft:'5%',
+    marginTop:'10%',
+    marginLeft:'8%',
     backgroundColor: "transparent",
 fontStyle:'italic'
   },
@@ -197,4 +213,3 @@ fontStyle:'italic'
   }, 
   
 });
- 

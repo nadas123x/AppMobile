@@ -1,112 +1,220 @@
-import React, { Component } from "react";
-import { StyleSheet, View, Image, Text } from "react-native";
+import React, { Component,useEffect,useFocusEffect } from 'react';
 
-function Untitled1(props) {
-  return (
-    <View style={styles.container}>
-      <View style={styles.image3StackStack}>
-        <View style={styles.image3Stack}>
-          <Image
-            resizeMode="contain"
-            style={styles.image3}
-          ></Image>
-          <Image
+import Svg, { Ellipse } from "react-native-svg";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  opacity,
+  TouchableOpacity,
+  TouchableHighlight,
+  ImageBackground,
+ Button,
+
+  Dimensions,
+  ScrollView
+} from 'react-native';
+
+export default function Pho( {navigation}){
+  
+
+  const PressHandler = () => {
+    navigation.navigate('Phoo')
+  }
+    return (
+      <ScrollView>
+        <View style={styles.container}>
+        <ImageBackground
+        source={{uri: 'https://i.pinimg.com/originals/03/02/bc/0302bc613ea56d6e74c6edb151712364.jpg'}}
+        style={styles.imagee}
+    />
+        <ImageBackground
+        source={{uri: 'https://wallpaperaccess.com/full/2693274.jpg'}}
+        style={styles.image}
+    />
+     <View style={styles.ellipseStack}>
+        <Svg viewBox="0 0 859.43 890.3" style={styles.ellipse}>
+          <Ellipse
+            strokeWidth={1}
+            fill="rgba(255,255,255,1)"
+            cx={'41%'}
+            cy={'51%'}
+            rx={'50%'}
+            ry={'50%'}
+          ></Ellipse>
+        </Svg>
+          <View style={styles.header}>
+         
+              <Text style={styles.headerTitle}>
+
+              <Image source ={{uri:'https://seeklogo.com/images/O/ocp-africa-logo-8D8E6B532F-seeklogo.com.png' }}style={styles.bc} />
+              </Text>
+              
+          </View>
+         
+          <View style={styles.postContent}>
+              <Text style={styles.postTitle}>
+               HISTORIQUE:
+              </Text>
+              
+
+              <Text style={styles.postDescription}>
+             •   <Text style={styles.post}>
+            En 1669: {"\n"}
+              </Text> >  Extraction du phosphore  pour la première fois de l’urine humaine par l’alchimiste allemand de Hambourg Henning Brandt. {"\n"}
+
+
+ •   <Text style={styles.post}>
+            En 1769: {"\n"}
+              </Text> >  Découverte du phosphore dans les os par le chimiste suédois Carl Wilhelm Scheele{"\n"}
+
+  •   <Text style={styles.post}>
+            En 1850: {"\n"}
+              </Text> >  Début d’exploitation des premiers gisements européens.{"\n"}
+
+•  <Text style={styles.post}>
+             En 20ème siècle : {"\n"}
+              </Text>  >  Découverte de gros gisement en Amérique et en Afrique.
+
+
+
+
+
+
+
+
+              </Text>
+            
+<Image
+            source={{uri:'https://upload.wikimedia.org/wikipedia/commons/b/be/%C4%8Cerven%C3%BD_fosfor.png'}}
             resizeMode="contain"
             style={styles.image2}
           ></Image>
-          <Image
-            source={require("../../assets/osp.png")}
-            resizeMode="contain"
-            style={styles.image4}
-          ></Image>
-          <Text style={styles.text}>
-            En 1669 : Extraction du phosphore pour la première fois de l’urine
-            humaine par l’alchimiste allemand de Hambourg Henning Brandt. {"\n"}
-            En 1769 : découverte du phosphore dans les os par le chimiste
-            suédois Carl Wilhelm Scheele{"\n"}En 1850 : début d’exploitation des
-            premiers gisements européens.{"\n"}En 20ème siècle : découverte de
-            gros gisement en Amérique et en Afrique.
-          </Text>
+              <TouchableHighlight 
+                style ={{
+                    height: 60,
+                    width:60,
+                    borderRadius:80,
+                    backgroundColor : "white",
+                    marginLeft :'75%',
+                    marginTop :'70%'
+                }}>
+            <Button
+             title=' ►'
+             alignItems='center'
+               onPress={PressHandler}
+
+               color="olive"  
+              
+                       />
+               </TouchableHighlight>
+
+              
+
+              <View style={styles.profile}>
+                <Image style={styles.avatar}
+                  source={{uri: 'https://bootdey.com/img/Content/avatar/avatar1.png'}}/>
+
+              
+              </View>
+      
+              <TouchableOpacity style={styles.shareButton}>
+                <Text style={styles.shareButtonText}>
+                  
+                  </Text>  
+              </TouchableOpacity> 
+          </View>
         </View>
-        <View style={styles.rect}>
-          <Text style={styles.historique}>HISTORIQUE</Text>
         </View>
-      </View>
-    </View>
-  );
-}
+     </ScrollView>
+    );
+  }
+
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "rgba(191,212,158,1)"
+  octet: {
+    fontFamily: 'icomoon',
+    fontSize: 20,
   },
-  image3: {
-    left: 964,
-    width: 899,
-    height: 557,
-    position: "absolute",
-    top: 348
+  container:{
+    backgroundColor: 'black',
+    height: Dimensions.get('window').height,
+  
+
   },
-  image2: {
-    top: 55,
-    left: 838,
-    position: "absolute",
-    height: 0,
-    width: 0,
-    opacity: 0
-  },
-  image4: {
-    top: 0,
-    left: 841,
-    width: 454,
-    height: 200,
-    position: "absolute",
-    backgroundColor: "rgba(81,118,40,1)"
-  },
-  text: {
-    top: 448,
-    left: 0,
-    position: "absolute",
-    fontFamily: "roboto-regular",
-    color: "#121212",
-    fontSize: 37
-  },
-  image3Stack: {
+  ellipse: {
     top: 0,
     left: 0,
-    width: 2160,
-    height: 905,
+    width:800,
+    height: 800,
     position: "absolute"
   },
-  rect: {
-    top: 228,
-    left: 881,
-    width: 375,
-    height: 53,
-    position: "absolute",
-    backgroundColor: "rgba(241,245,236,1)",
-    borderWidth: 1,
-    borderColor: "rgba(66,110,12,1)",
-    borderStyle: "solid"
+ 
+  
+  
+  post:{
+fontSize:15,
+    fontWeight:"bold",
+    marginLeft:'45%',
+    marginTop:'24%',
+    color:'olive',
+    backgroundColor: "transparent",
   },
-  historique: {
-    fontFamily: "roboto-700italic",
-    color: "rgba(29,43,24,1)",
-    fontSize: 20,
-    textAlign: "center",
-    textDecorationLine: "underline",
-    marginTop: 5,
-    marginLeft: 42
-  },
-  image3StackStack: {
-    width: 2160,
-    height: 905,
-    marginTop: 58,
-    marginLeft: -861
-  }
-});
 
-export default Untitled1;
+  image:{
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+    position: 'absolute',
+
+
+  },
+  
+  
+  imagee:{
+      width: '100%',
+      height: '100%',
+      resizeMode: 'cover',
+      position: 'absolute',
+  
+  
+    },
+image2:{
+   width: 305,
+      height: 160,
+       marginLeft:'20%',
+    marginTop:'106%',
+      resizeMode: 'cover',
+      position: 'absolute',
+},
+  postTitle:{
+    fontSize:20,
+    fontWeight:"bold",
+    textDecorationLine: "underline",
+    marginLeft:'35%',
+    marginTop:'24%',
+    color:'olive',
+    backgroundColor: "transparent",
+  
+  },
+  postDescription:{
+    fontSize:14,
+    marginTop:'10%',
+    marginLeft:'5%',
+    backgroundColor: "transparent",
+fontStyle:'italic'
+  },
 
  
+ 
+  
+  name:{
+    fontSize:22,
+    color:"#00BFFF",
+    fontWeight:'600',
+    alignSelf:'center',
+    marginLeft:'10%'
+  }, 
+  
+});
