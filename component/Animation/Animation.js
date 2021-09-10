@@ -19,7 +19,7 @@ const Animation = ({navigation}) => {
     
   }
   const getActualites = async ()=>{
-    await fetch('https://ocpgetarticles.younessrihr.repl.co').then(r=>r.json()).then(r=> {setActualite(r)})
+    await fetch('https://warm-river-02511.herokuapp.com').then(r=>r.json()).then(r=> {setActualite(r)})
   }
   const tab=useRef([])
   const count=useRef(0)
