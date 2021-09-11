@@ -20,13 +20,13 @@ export default class Posts extends Component {
     
     this.state = {
       data: [
-        {id:1, title: "Actualités",   
+        {id:1, title: "",   
 
-                         image:"https://imagizer.imageshack.com/v2/1024x768q90/922/Qx0r0H.png"},
+                         image:"https://imagizer.imageshack.com/img922/8833/w4qGxr.png"},
         {id:2, title: "",           image:"https://imagizer.imageshack.com/img922/7228/oT9Gm9.png"} ,
         {id:3, title: " ",             image:"https://imagizer.imageshack.com/v2/800x600q90/922/Qx0r0H.png"}, 
-        {id:4, title: "",           image:"https://imagizer.imageshack.com/v2/320x240q90/922/Qx0r0H.png"}, 
-        {id:6, title: "",          image:"https://imagizer.imageshack.com/v2/1024x768q90/924/eOM6aa.png"}, 
+        {id:4, title: "",           image:"https://imagizer.imageshack.com/img923/1181/NsFt0J.png"}, 
+        {id:6, title: "",          image:"https://imagizer.imageshack.com/img923/6222/5uoknL.png"}, 
       
       
       ]
@@ -58,9 +58,7 @@ export default class Posts extends Component {
     if(idMenu==4){
       this.props.navigation.navigate('Usine')
     }
-    if(idMenu==5){
-      this.props.navigation.navigate('Tyy')
-    }
+   
     if(idMenu==6){
       this.props.navigation.navigate('Tyy')
     }
