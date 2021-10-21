@@ -16,11 +16,11 @@ import {
   ScrollView
 } from 'react-native';
 
-export default function Prrop( {navigation}){
+export default function Pho( {navigation}){
   
 
   const PressHandler = () => {
-    navigation.navigate('Pr')
+    navigation.navigate('Utilisation')
   }
     return (
       <ScrollView>
@@ -55,26 +55,29 @@ export default function Prrop( {navigation}){
          
           <View style={styles.postContent}>
               <Text style={styles.postTitle}>
-                    Présentation:
+               HISTORIQUE:
               </Text>
               
 
               <Text style={styles.postDescription}>
-             •    Un des leaders mondiaux sur le marché du phosphate et ses
-dérivés, OCP opère sur les cinq continents et dispose des plus
-importantes réserves de phosphate au monde. Avec plus de 90 ans
-d’expérience dans la mine et 45 ans en chimie, OCP offre l’une
-des plus larges gammes de roche pour divers usages. Premier
-exportateur de phosphate brut et d’acide phosphorique dans le
-monde et l’un des principaux exportateurs d’engrais phosphatés,
-OCP joue un rôle central dans ses régions d’implantation et
-emploie directement près de 20 000 personnes ce qui le place dans
-le peloton de tête des plus grands employeurs du Royaume.
-Première entreprise industrielle du Maroc, OCP contribue
-substantiellement au développement de l’économie nationale par
-le biais de ses exportations .En
-outre, OCP apporte un soutien indéfectible à l’agriculture
-marocaine en général et aux PME en particulier.
+             •   <Text style={styles.post}>
+            En 1669: {"\n"}
+              </Text>  Extraction du phosphore  pour la première fois de l’urine humaine par l’alchimiste allemand de Hambourg Henning Brandt. {"\n"}
+
+
+ •   <Text style={styles.post}>
+            En 1769: {"\n"}
+              </Text>  Découverte du phosphore dans les os par le chimiste suédois Carl Wilhelm Scheele{"\n"}
+
+  •   <Text style={styles.post}>
+            En 1850: {"\n"}
+              </Text>  Début d’exploitation des premiers gisements européens.{"\n"}
+
+•  <Text style={styles.post}>
+             En 20ème siècle : {"\n"}
+              </Text>   Découverte de gros gisement en Amérique et en Afrique.
+
+
 
 
 
@@ -83,7 +86,11 @@ marocaine en général et aux PME en particulier.
 
               </Text>
             
-
+<Image
+            source={{uri:'https://upload.wikimedia.org/wikipedia/commons/b/be/%C4%8Cerven%C3%BD_fosfor.png'}}
+            resizeMode="contain"
+            style={styles.image2}
+          ></Image>
               <TouchableHighlight 
                 style ={{
                     height: 60,
@@ -91,7 +98,7 @@ marocaine en général et aux PME en particulier.
                     borderRadius:80,
                     backgroundColor : "white",
                     marginLeft :'75%',
-                    marginTop :'20%'
+                    marginTop :'70%'
                 }}>
             <Button
              title=' ►'
@@ -146,7 +153,14 @@ const styles = StyleSheet.create({
  
   
   
-  
+  post:{
+fontSize:15,
+    fontWeight:"bold",
+    marginLeft:'45%',
+    marginTop:'24%',
+    color:'olive',
+    backgroundColor: "transparent",
+  },
 
   image:{
     width: '100%',
@@ -166,12 +180,19 @@ const styles = StyleSheet.create({
   
   
     },
-
+image2:{
+   width: 255,
+      height: 60,
+       marginLeft:'11%',
+    marginTop:'116%',
+      resizeMode: 'cover',
+      position: 'absolute',
+},
   postTitle:{
     fontSize:20,
     fontWeight:"bold",
     textDecorationLine: "underline",
-    marginLeft:'45%',
+    marginLeft:'35%',
     marginTop:'24%',
     color:'olive',
     backgroundColor: "transparent",
@@ -197,4 +218,3 @@ fontStyle:'italic'
   }, 
   
 });
- 

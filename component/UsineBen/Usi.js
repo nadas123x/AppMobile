@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text,ScrollView,ImageBackground,TouchableHighlight,Button, Image } from "react-native";
 
+
 export default function Usi({navigation}) {
     
   const PressHandler = () => {
     navigation.navigate('Usii')
   }
+   
+ 
   return (
     <ScrollView>
     <View style={styles.container}>
@@ -62,7 +65,7 @@ laquelle il sera injecté dans le four.{"\n"}
                     height: 60,
                     width:60,
                     backgroundColor : "transparent",
-                    marginLeft :'76%',
+                    marginLeft :'66%',
                     marginTop :'3%'
                 }}>
             <Button
@@ -87,8 +90,8 @@ const styles = StyleSheet.create({
   },
  
   rect2: {
-    width:420,
-    height: 696,
+    width:'100%',
+    height: '100%',
     backgroundColor: "rgba(208,213,214,0.66)",
     marginTop: '10%',
     marginLeft: '1%',

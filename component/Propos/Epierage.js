@@ -20,7 +20,7 @@ export default function Foration( {navigation}){
   
 
   const PressHandler = () => {
-    navigation.navigate('Phooo')
+    navigation.navigate('Extraction')
   }
     return (
       <ScrollView>
@@ -63,13 +63,13 @@ export default function Foration( {navigation}){
               <Text style={styles.postDescription}>
            •     Cette opération close le cycle de la chaîne cinématique. Elle consiste à un simple traitement du BPL qu’on peut le résumer dans les étapes suivantes :{"\n"}
            {"\n"}
->  Dépôts du phosphate dans les trémies.{"\n"}
+{'>'}  Dépôts du phosphate dans les trémies.{"\n"}
 {"\n"}
->  Passage par l’extracteur métallique.{"\n"}
+{'>'}  Passage par l’extracteur métallique.{"\n"}
 {"\n"}
->  Epierrage sur le crible de maille 90*90 mm2.{"\n"}
+{'>'}   Epierrage sur le crible de maille 90*90 mm2.{"\n"}
 {"\n"}
->  Le passant convoyé au stock.{"\n"}
+{'>'}   Le passant convoyé au stock.{"\n"}
 
 
 {"\n"}
@@ -175,9 +175,9 @@ fontSize:15,
   
   
   imagee:{
-      width: 385,
-      height: 220,
-       marginLeft:'4%',
+    width: '105%',
+    height: '35%',
+       marginLeft:'3%',
     marginTop:'91%',
       resizeMode: 'cover',
       position: 'absolute',

@@ -20,7 +20,7 @@ export default function Transport( {navigation}){
   
 
   const PressHandler = () => {
-    navigation.navigate('Phooo')
+    navigation.navigate('Extraction')
   }
     return (
       <ScrollView>
@@ -64,15 +64,15 @@ export default function Transport( {navigation}){
            •    Le transport vers les trémies d’épierrage et criblage est assuré par des camions de capacité de 110 t et de 170 t.{"\n"}
 L’affectation des camions aux machines obéit au principe qu’aucune machine (pelle ou dragline) ne soit en arrêt sauf en cas de panne en plus des paramètres suivants :{"\n"}
 {"\n"}
->  Rendement des machines et camions (heures continues de travail pour les machines et le nombre de voyage pour les camions){"\n"}
+{'>'}  Rendement des machines et camions (heures continues de travail pour les machines et le nombre de voyage pour les camions){"\n"}
 {"\n"}
->  Cycle des machines et camions.{"\n"}
+{'>'}  Cycle des machines et camions.{"\n"}
 
->  Distance de transport.{"\n"}
+{'>'}   Distance de transport.{"\n"}
 
->  Niveau à charger (couche mince ou épaisse){"\n"}
+{'>'}   Niveau à charger (couche mince ou épaisse){"\n"}
 
->  Capacité trémie d’épierrage – criblage.
+{'>'}   Capacité trémie d’épierrage – criblage.
 
 {"\n"}
 {"\n"}
@@ -177,9 +177,9 @@ fontSize:15,
   
   
   imagee:{
-      width: 305,
-      height: 360,
-       marginLeft:'38%',
+      width: '60%',
+      height: '20%',
+       marginLeft:'28%',
     marginTop:'111%',
       resizeMode: 'cover',
       position: 'absolute',
@@ -200,7 +200,7 @@ fontSize:15,
   postDescription:{
     fontSize:14,
     marginTop:'5%',
-    marginLeft:'21%',
+    marginLeft:'25%',
     backgroundColor: "transparent",
 fontStyle:'italic'
   },

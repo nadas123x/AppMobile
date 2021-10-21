@@ -23,9 +23,12 @@ export default class Posts extends Component {
         {id:1, title: "",   
 
                          image:"https://imagizer.imageshack.com/img922/8833/w4qGxr.png"},
+                         {id:4, title: " ",             image:"https://imagizer.imageshack.com/v2/800x600q90/922/Qx0r0H.png"}, 
         {id:2, title: "",           image:"https://imagizer.imageshack.com/img922/7228/oT9Gm9.png"} ,
-        {id:3, title: " ",             image:"https://imagizer.imageshack.com/v2/800x600q90/922/Qx0r0H.png"}, 
-        {id:4, title: "",           image:"https://imagizer.imageshack.com/img923/1181/NsFt0J.png"}, 
+        {id:3, title: "",           image:"https://imagizer.imageshack.com/img924/290/o9HmKX.png"} ,
+
+       
+        {id:5, title: "",           image:"https://imagizer.imageshack.com/img923/1181/NsFt0J.png"}, 
         {id:6, title: "",          image:"https://imagizer.imageshack.com/img923/6222/5uoknL.png"}, 
       
       
@@ -50,13 +53,13 @@ export default class Posts extends Component {
       this.props.navigation.navigate('News',{actualite})
     }
     if(idMenu==2){
-      this.props.navigation.navigate('Pho')
+      this.props.navigation.navigate('Général')
     }
     if(idMenu==3){
       this.props.navigation.navigate('Prrop')
     }
     if(idMenu==4){
-      this.props.navigation.navigate('Usine')
+      this.props.navigation.navigate('Presentation')
     }
    
     if(idMenu==6){

@@ -59,7 +59,7 @@ phosphate n’est pas accepté par les clients.
                     width:60,
                     borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :'75%',
+                    marginLeft :'70%',
                     marginTop :'5%'
                 }}>
             <Button
@@ -84,8 +84,8 @@ const styles = StyleSheet.create({
   },
  
   rect2: {
-    width:420,
-    height: 696,
+ width:'100%',
+    height: '100%',
     backgroundColor: "rgba(208,213,214,0.66)",
     marginTop: '8%',
     marginLeft: '1%',
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
   },
   image: {
-    width: 400,
+    width: '100%',
     height: 314,
     marginTop: -20,
     marginLeft: 2

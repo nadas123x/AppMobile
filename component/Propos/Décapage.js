@@ -20,7 +20,7 @@ export default function Décapage( {navigation}){
   
 
   const PressHandler = () => {
-    navigation.navigate('Phooo')
+    navigation.navigate('Extraction')
   }
     return (
       <ScrollView>
@@ -181,8 +181,8 @@ fontSize:15,
   
   
   imagee:{
-      width: 305,
-      height: 360,
+    width: '70%',
+    height: '40%',
        marginLeft:'20%',
     marginTop:'50%',
       resizeMode: 'cover',
@@ -204,7 +204,7 @@ fontSize:15,
   postDescription:{
     fontSize:14,
     marginTop:'8%',
-    marginLeft:'21%',
+    marginLeft:'23%',
     backgroundColor: "transparent",
 fontStyle:'italic'
   },

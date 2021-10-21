@@ -20,7 +20,7 @@ export default function Pho( {navigation}){
   
 
   const PressHandler = () => {
-    navigation.navigate('Phooo')
+    navigation.navigate('Extraction')
   }
     return (
       <ScrollView>
@@ -187,7 +187,7 @@ imag:{
     fontSize:20,
     fontWeight:"bold",
     textDecorationLine: "underline",
-    marginLeft:'35%',
+    marginLeft:'45%',
     marginTop:'15%',
     color:'olive',
     backgroundColor: "transparent",
@@ -195,7 +195,7 @@ imag:{
   },
   postDescription:{
     fontSize:14,
-    marginTop:'10%',
+    marginTop:'15%',
     marginLeft:'8%',
     backgroundColor: "transparent",
 fontStyle:'italic'

@@ -63,11 +63,11 @@ extra-fines sont dissipées à travers la cheminée par les ventilateurs de tira
 <TouchableHighlight 
                 style ={{
                     height: 90,
-                    width:30,
+                    width:'8%',
                     borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :'18%',
-                    marginTop :'-55%'
+                    marginLeft :'15%',
+                    marginTop :'-50%'
                 }}>
             <Button
              title=' 1'
@@ -81,10 +81,10 @@ extra-fines sont dissipées à travers la cheminée par les ventilateurs de tira
                <TouchableHighlight 
                 style ={{
                     height: 90,
-                    width:30,
+                    width:'9%',
                     borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :'30%',
+                    marginLeft :'27%',
                     marginTop :'-19%'
                     
                 }}>
@@ -100,11 +100,11 @@ extra-fines sont dissipées à travers la cheminée par les ventilateurs de tira
                <TouchableHighlight 
                 style ={{
                     height: 20,
-                    width:60,
+                    width:'12%',
                     borderRadius:80,
                     backgroundColor : "darkgreen",
-                    marginLeft :'42%',
-                    marginTop :'-21%'
+                    marginLeft :'39%',
+                    marginTop :'-25%'
                 }}>
             <Button
              title=' 3'
@@ -118,10 +118,10 @@ extra-fines sont dissipées à travers la cheminée par les ventilateurs de tira
                <TouchableHighlight 
                 style ={{
                     height: 30,
-                    width:55,
+                    width:'13%',
                     borderRadius:80,
                     backgroundColor : "darkgreen",
-                    marginLeft :'60%',
+                    marginLeft :'54%',
                     marginTop :'-7%'
                 }}>
             <Button
@@ -136,11 +136,11 @@ extra-fines sont dissipées à travers la cheminée par les ventilateurs de tira
                <TouchableHighlight 
                 style ={{
                     height: 30,
-                    width:50,
+                    width:'14%',
                     borderRadius:80,
                     backgroundColor : "darkgreen",
-                    marginLeft :'77%',
-                    marginTop :'-10%'
+                    marginLeft :'70%',
+                    marginTop :'-11%'
                 }}>
             <Button
              title=' 5'
@@ -154,7 +154,7 @@ extra-fines sont dissipées à travers la cheminée par les ventilateurs de tira
                <TouchableHighlight 
                 style ={{
                     height: 30,
-                    width:45,
+                    width:'10%',
                     borderRadius:80,
                     backgroundColor : "darkgreen",
                     marginLeft :'88%',
@@ -183,11 +183,11 @@ const styles = StyleSheet.create({
   },
  
   rect2: {
-    width:420,
-    height: 696,
+    width:'100%',
+    height: 700,
     backgroundColor: "rgba(208,213,214,0.66)",
-    marginTop: 45,
-    marginLeft: 2,
+    marginTop: '10%',
+    marginLeft: '1%',
     
     
 
@@ -205,10 +205,10 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
   },
   image: {
-    width: 450,
-    height: 400,
+    width: '100%',
+    height: '52%',
     marginTop: '-10%',
-    marginLeft: '1%'
+    marginLeft: '0%'
   },
   description:{
     fontSize:13,

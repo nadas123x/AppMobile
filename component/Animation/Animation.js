@@ -36,7 +36,7 @@ const Animation = ({navigation}) => {
     getActualites()
     Animated.timing(fadeAnim, {
       toValue: 100,
-      duration: 7000,
+      duration: 10000,
       useNativeDriver:false,
       easing:Easing.linear
       
@@ -64,12 +64,18 @@ const Animation = ({navigation}) => {
    }
      loadData();
    
-    timer.setInterval('tim',intervalAction,300)
+    timer.setInterval('tim',intervalAction,600)//600ms fait reference à l'intervale entre chaque element chimique
     
   },[]);
 useEffect(()=>{
-  if(actualite.length!=0){
-    timer.setTimeout("lol",()=>{navigation.navigate('Posts',{actualite})},1000)
+  if(actualite.length!=0){//Signifie qu'on a recupérer les actualités depuis le serveur
+    if(count.current>=13){//count==13 signifie l'arrivée au 13eme element qui est le Phosphore
+    timer.setTimeout("lol",()=>{navigation.navigate('Posts',{actualite})},2000) // Signifie qu'ont attend 2 secondes aprés l'arrivée sur P
+    }
+    else{
+      
+      timer.setTimeout("loel",()=>{setActualite([...actualite])},1000)
+    }
   }
 },[actualite])
  
@@ -88,8 +94,8 @@ useEffect(()=>{
 </View>
   <Text style={{color:"#A4BD24",fontWeight:"bold",textAlign:'center',fontSize:70,marginTop:'5%'}} id="abrev">{abrev}</Text>
   <View style={{marginTop:'15%'}}>
-  <Text style={{color:"grey",textAlign:'center',fontSize:30}} id="name">{name}</Text>
-  <Text style={{color:"grey",textAlign:'center',fontSize:30}} id="massFloat">{massFloat}</Text>
+  <Text style={{color:"grey",textAlign:'center',fontSize:25}} id="name">{name}</Text>
+  <Text style={{color:"grey",textAlign:'center',fontSize:25}} id="massFloat">{massFloat}</Text>
   </View>
 </Animated.View>
       </View>

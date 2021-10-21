@@ -1,13 +1,13 @@
 import {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
-import Prrop from '../Propos/Prrop';
+import Presentation from '../Propos/Presentation';
 import {StyleSheet} from "react-native";
 import Posts from '../UzinItem/Posts';
 import SB from '../StyledButton/SB';
 import Animation from '../Animation/Animation';
 import News from '../StyledButton/News';
-import Pr from '../Propos/Pr';
-import Prr from '../Propos/Prr';
+import Infos from '../Propos/Infos';
+import Historique from '../Propos/Historique';
 import ActualiteContent from '../ActualiteContent/ActuContent'
 import Tyy from '../Ty/Tyy';
 import Usine from '../UsineBen/Usine';
@@ -21,9 +21,9 @@ import Virole from '../UsineBen/Virole';
 import Chambre from '../UsineBen/Chambre';
 import Filtre from '../UsineBen/Filtre';
 import Cheminee from '../UsineBen/Cheminee';
-import Pho from '../Propos/Pho';
-import Phoo from '../Propos/Phoo';
-import Phooo from '../Propos/Phooo';
+import Général from '../Propos/Général';
+import Utilisation from '../Propos/Utilisation';
+import Extraction from '../Propos/Extraction';
 import Foration from '../Propos/Foration';
 import Sautage from '../Propos/Sautage';
 import Décapage from '../Propos/Décapage';
@@ -51,17 +51,18 @@ const screens={
             
           }),
     },
-    Prrop:{
-        screen: Prrop
+   Presentation:{
+        screen: Presentation
+        
     },
     Tyy:{
       screen: Tyy
     },
-    Pr:{
-      screen:Pr
+    Infos:{
+      screen:Infos
     },
-    Prr:{
-screen:Prr
+    Historique:{
+screen:Historique
     },
     Usine:{
       screen:Usine
@@ -101,14 +102,14 @@ screen:Prr
   Cheminee:{
     screen: Cheminee
   },
-  Pho:{
-    screen: Pho
+  Général:{
+    screen: Général
   },
-  Phoo:{
-    screen: Phoo
+  Utilisation:{
+    screen: Utilisation
   },
-   Phooo:{
-    screen: Phooo
+  Extraction:{
+    screen: Extraction
   },
   Foration:{
     screen: Foration

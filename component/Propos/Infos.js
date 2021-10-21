@@ -17,11 +17,11 @@
    ScrollView
  } from 'react-native';
  
- export default function Pr( {navigation}){
+ export default function Infos( {navigation}){
    
  
    const PressHandler = () => {
-     navigation.navigate('Prr')
+     navigation.navigate('Historique')
    }
      return (
        <ScrollView>
@@ -188,7 +188,7 @@ fertilisants : le phosphore et l’azote) et le NPK (engrais ternaire ).
      fontWeight:"bold",
      textDecorationLine: "underline",
      marginLeft:'50%',
-     marginTop:'8%',
+     marginTop:'14%',
      color:'olive',
      backgroundColor: "transparent",
      padding: 0,

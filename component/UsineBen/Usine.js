@@ -40,7 +40,7 @@ diminue à un pourcentage qui ne dépasse pas 2%.
                     height: 60,
                     width:60,
                     backgroundColor : "transparent",
-                    marginLeft :'75%',
+                    marginLeft :'69%',
                     marginTop :'7%'
                 }}>
             <Button
@@ -65,12 +65,12 @@ const styles = StyleSheet.create({
   },
  
   rect2: {
-    width:420,
-    height: 696,
+    width:'100%',
+    height: '100%',
     backgroundColor: "rgba(208,213,214,0.66)",
     marginTop: '10%',
-    marginLeft: '1%',
-        marginRight: '1%',
+    marginLeft: '0%',
+        marginRight: '0%',
 
     
 
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   name:{
     fontSize:19,
     textDecorationLine: "underline",
-    marginLeft:'15%',
+    marginLeft:'14%',
     marginTop:'1%',
     color:'darkgreen',
     backgroundColor: "transparent",
@@ -87,16 +87,16 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
   },
   image: {
-    width: 400,
-    height: 314,
-    marginTop: '1%',
-    marginLeft: '1%'
+    width: '100%',
+    height: 312,
+    marginTop: '0%',
+    marginLeft: '0%'
   },
   description:{
-    fontSize:13,
+    fontSize:12,
     fontWeight:'800',
-    marginLeft: 0,
-    marginRight:'5%',
+    marginLeft: '1%',
+    marginRight:'0%',
     textAlign: 'left',
     color: "black",
     marginTop:'6%',

@@ -20,7 +20,7 @@ export default function Foration( {navigation}){
   
 
   const PressHandler = () => {
-    navigation.navigate('Phooo')
+    navigation.navigate('Extraction')
   }
     return (
       <ScrollView>
@@ -61,7 +61,7 @@ export default function Foration( {navigation}){
               
 
               <Text style={styles.postDescription}>
-           •      Elle consiste à forer des troues de diamètres 9’’ = 228 mm, ce choix permet d’avoir une énergie importante dégagée par l’explosif. Ces derniers serviront des loges pour les charges explosives, et leur profondeur dépend de celle du niveau phosphaté.
+           •     Elle consiste à forer des troues de diamètres 9’’ = 228 mm, ce choix permet d’avoir une énergie importante dégagée par l’explosif. Ces derniers serviront des loges pour les charges explosives, et leur profondeur dépend de celle du niveau phosphaté.
 
 
 
@@ -169,9 +169,9 @@ fontSize:15,
   
   
   imagee:{
-      width: 305,
-      height: 360,
-       marginLeft:'20%',
+    width: '70%',
+    height: '40%',
+       marginLeft:'12%',
     marginTop:'64%',
       resizeMode: 'cover',
       position: 'absolute',
@@ -192,7 +192,7 @@ fontSize:15,
   postDescription:{
     fontSize:14,
     marginTop:'8%',
-    marginLeft:'15%',
+    marginLeft:'19%',
     backgroundColor: "transparent",
 fontStyle:'italic'
   },

@@ -91,8 +91,8 @@ const styles = StyleSheet.create({
   },
  
   rect2: {
-    width:420,
-    height: 696,
+    width:'100%',
+    height: 300,
     backgroundColor: "rgba(208,213,214,0.66)",
     marginTop: '10%',
     marginLeft: '1%',
@@ -114,8 +114,8 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
   },
   image: {
-    width: 400,
-    height: 200,
+    width: '100%',
+    height: 20,
     marginLeft: 0,
     marginTop:'-15%',
     

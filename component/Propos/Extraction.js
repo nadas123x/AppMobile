@@ -50,7 +50,7 @@ export default function Pho( {navigation}){
           <Ellipse
             strokeWidth={1}
             fill="rgba(255,255,255,1)"
-            cx={'41%'}
+            cx={'37%'}
             cy={'51%'}
             rx={'50%'}
             ry={'50%'}
@@ -147,7 +147,7 @@ export default function Pho( {navigation}){
                     borderRadius:80,
                     backgroundColor : "darkgreen",
                     marginLeft :'41%',
-                    marginTop :'-5%'
+                    marginTop :'-6%'
                 }}>
             <Button
              title=' décapage  '
@@ -182,7 +182,7 @@ export default function Pho( {navigation}){
                     width:350,
                     borderRadius:80,
                     backgroundColor : "darkgreen",
-                    marginLeft :'12%',
+                    marginLeft :'4%',
                     marginTop :'8%'
                 }}>
             <Button

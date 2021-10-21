@@ -20,7 +20,7 @@ export default function Foration( {navigation}){
   
 
   const PressHandler = () => {
-    navigation.navigate('Phooo')
+    navigation.navigate('Extraction')
   }
     return (
       <ScrollView>
@@ -64,11 +64,11 @@ export default function Foration( {navigation}){
            •     Cette opération consiste à mettre l’explosif dans les trous de foration et procéder au tir.
 L’explosif utilisé dans le les mines à ciel ouvert de KHOURIBGA est l’Amonix composé de nitrate d’ammonium 94% et de fuel 6% .Le choix de telle explosif est justifier par le fait qu’il est :{"\n"}
 {"\n"}
->Sécuritaire : insensible au choc (10 kg / cm2).{"\n"}
+{'>'}Sécuritaire : insensible au choc (10 kg / cm2).{"\n"}
 {"\n"}
->Economique : 4 DH / kg.{"\n"}
+{'>'}Economique : 4 DH / kg.{"\n"}
 {"\n"}
->Facile à mettre on œuvre.{"\n"}
+{'>'}Facile à mettre on œuvre.{"\n"}
 {"\n"}
 {"\n"}
 
@@ -172,10 +172,10 @@ fontSize:15,
   
   
   imagee:{
-      width: 305,
-      height: 360,
-       marginLeft:'20%',
-    marginTop:'81%',
+    width: '70%',
+    height: '30%',
+       marginLeft:'18%',
+    marginTop:'89%',
       resizeMode: 'cover',
       position: 'absolute',
   
@@ -195,7 +195,7 @@ fontSize:15,
   postDescription:{
     fontSize:14,
     marginTop:'5%',
-    marginLeft:'21%',
+    marginLeft:'26%',
     backgroundColor: "transparent",
 fontStyle:'italic'
   },
