@@ -42,7 +42,7 @@ const screens={
             
           }),
     },
-
+    
     Posts:{
         screen: Posts,
         navigationOptions: ({ navigation }) => ({
