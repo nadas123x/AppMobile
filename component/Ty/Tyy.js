@@ -16,14 +16,17 @@ import {BackHandler} from 'react-native';
 const SignUpView  = ({navigation}) =>  {
   const [fullName, setFullName] = useState('');
  
+  const [Email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+
   const onClickListener = () => {
-    if(fullName === '' || message ===''){
+    if(fullName === '' || message ==='' || Email===''){
       Alert.alert("", "Merci de remplir tous les champs");
     }else {
       console.log("fullName : " + fullName);
-     
+      console.log("Message : " + Email);
+
       console.log("Message : " + message);
       Alert.alert("", "Merci pour votre visite");
       navigation.navigate('SB')
@@ -49,12 +52,19 @@ const SignUpView  = ({navigation}) =>  {
         <View style={styles.inputContainer}>
           <Image style={styles.inputIcon} source={{uri: 'https://png.icons8.com/key-2/ultraviolet/50/3498db'}}/>
           <TextInput style={styles.inputs}
+              placeholder="Email"
+              keyboardType="email-address"
+              underlineColorAndroid='transparent'
+              onChangeText={(Email) => setEmail(Email)}/>
+        </View>
+        <View style={styles.inputContainer}>
+          <Image style={styles.inputIcon} source={{uri: 'https://png.icons8.com/key-2/ultraviolet/50/3498db'}}/>
+          <TextInput style={styles.inputs} multiline
               placeholder="Message"
               keyboardType="email-address"
               underlineColorAndroid='transparent'
               onChangeText={(message) => setMessage(message)}/>
         </View>
-
         <TouchableHighlight style={[styles.buttonContainer, styles.signupButton]} onPress={() => onClickListener('sign_up')}>
           <Text style={styles.signUpText}>Submit</Text>
         </TouchableHighlight>
