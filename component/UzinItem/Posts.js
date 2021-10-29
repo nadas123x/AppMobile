@@ -56,12 +56,14 @@ export default class Posts extends Component {
       this.props.navigation.navigate('Général')
     }
     if(idMenu==3){
-      this.props.navigation.navigate('Prrop')
+      this.props.navigation.navigate('Sechagedef')
     }
     if(idMenu==4){
       this.props.navigation.navigate('Presentation')
     }
-   
+    if(idMenu==5){
+      this.props.navigation.navigate('Usine')
+    }
     if(idMenu==6){
       this.props.navigation.navigate('Tyy')
     }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text,ScrollView,ImageBackground,TouchableHighlight,Button, Image } from "react-native";
 
-export default function Usiii({navigation}) {
+export default function Systeme({navigation}) {
     
   const PressHandler1 = () => {
     navigation.navigate('Foyer')
@@ -20,6 +20,9 @@ export default function Usiii({navigation}) {
   }
   const PressHandler6 = () => {
     navigation.navigate('Cheminee')
+  }
+  const PressHandler7 = () => {
+    navigation.navigate('Posts')
   }
   return (
     <ScrollView>
@@ -165,6 +168,15 @@ extra-fines sont dissipées à travers la cheminée par les ventilateurs de tira
              title=' 6'
              alignItems='center'
                onPress={PressHandler6}
+
+               color="darkgreen"  
+              
+                       />
+                           }}>
+            <Button
+             title=' EXIT'
+             alignItems='center'
+               onPress={PressHandler7}
 
                color="darkgreen"  
               

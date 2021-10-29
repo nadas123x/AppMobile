@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text,ScrollView,ImageBackground,TouchableHighlight,Button, Image } from "react-native";
 
-export default function Usii({navigation}) {
+export default function Sechagedef({navigation}) {
     
   const PressHandler = () => {
     navigation.navigate('Usiii')
@@ -15,55 +15,62 @@ export default function Usii({navigation}) {
     />
         <View style={styles.rect2}>
          
-          <Text style={styles.description}>
-    
-             </Text>
+       
        
          
           <Text style={styles.description}> 
-          {"\n"}
-<Text style={styles.name}>	→ Unité de stockage et chargement du phosphate sec : {"\n"} </Text>
-{"\n"}
-          {"\n"}
-          •   Le phosphate criblé alimente le circuit sec où il sera classé en
-différentes qualités, cette unité comporte trois stocks ayant
-une capacité globale de 500 000 tonnes.Une station de
-chargement permet de remplir les wagons à destination du
-Port de Casablanca, et du Port de Jorf-ellasfar.{"\n"}
-          {"\n"}
-          <Text style={styles.name}>	→ Unité de séchage : {"\n"} </Text>
-          {"\n"}
-          {"\n"}
-          •    Elle comprend 8 fours sécheurs d’une capacité de 300  t/h
-chacun. Son rôle est de diminuer, par échange thermique
-l’humidité contenue dans le phosphate brut ou lavé.{"\n"}
+         
+<Text style={styles.name}>Définition:{"\n"}</Text>
 {"\n"}
 {"\n"}
+•   Le séchage est une opération unitaire
+largement utilisé dans l'industrie minière,
+souvent en complément d'opérations comme
+la sédimentation, la filtration ou l'essorage.
 
-<Text style={styles.name}>	♦ Pourquoi le séchage ? : {"\n"} </Text>
+Il permet la réduction de l'humidité d'un
+solide à une certaine limite.
+Il a pour but  de rendre le minerai
+sec et marchand conformément aux
+exigences des clients.
 
 {"\n"}
 {"\n"}
+NB: Le séchage n'est pas un traitement
+d'enrichissement.
 
-•   L’eau contenue dans le phosphate augmente les frais
-de transport du produit.{"\n"}
+{"\n"}
 {"\n"}
 
-•   La valorisation du produit : les clients exigent une
-humidité bien déterminée. Au-delà de cette valeur le
-phosphate n’est pas accepté par les clients.
+
+
+       
+          
+          {"\n"}
+ 
+{"\n"}
+
+
+      
+  
 </Text>
+
+            <Text style={styles.description}>
+  
+           
+            </Text>
+          
 <TouchableHighlight 
                 style ={{
                     height: 60,
-                    width:60,
+                    width:70,
                     borderRadius:80,
                     backgroundColor : "transparent",
-                    marginLeft :'70%',
-                    marginTop :'5%'
-                }}>
+                    marginLeft :'75%',
+                    marginTop :'10%'
+               }}>
             <Button
-             title=' ►'
+             title=' exit '
              alignItems='center'
                onPress={PressHandler}
 
@@ -84,10 +91,10 @@ const styles = StyleSheet.create({
   },
  
   rect2: {
- width:'100%',
-    height: '100%',
+    width:420,
+    height: 696,
     backgroundColor: "rgba(208,213,214,0.66)",
-    marginTop: '8%',
+    marginTop: '10%',
     marginLeft: '1%',
     
     
@@ -101,20 +108,23 @@ const styles = StyleSheet.create({
     marginTop:0,
     color:'darkgreen',
     backgroundColor: "transparent",
+    textDecorationLine: "underline",
+
     
     fontWeight:'bold',
   },
   image: {
-    width: '100%',
-    height: 314,
-    marginTop: -20,
-    marginLeft: 2
+    width: 500,
+    height: 250,
+    marginLeft: '0%',
+    marginTop:'-15%',
+    
   },
   description:{
     fontSize:14,
     fontWeight:'800',
     marginLeft: 0,
-    marginRight: '5%',
+    marginRight: 10,
     textAlign: 'left',
     color: "black",
     marginTop:'1%',

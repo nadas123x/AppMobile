@@ -5,7 +5,7 @@ import { StyleSheet, View, Text,ScrollView,ImageBackground,TouchableHighlight,Bu
 export default function Usi({navigation}) {
     
   const PressHandler = () => {
-    navigation.navigate('Usii')
+    navigation.navigate('UsineInfo')
   }
    
  

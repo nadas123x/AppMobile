@@ -11,9 +11,9 @@ import Historique from '../Propos/Historique';
 import ActualiteContent from '../ActualiteContent/ActuContent'
 import Tyy from '../Ty/Tyy';
 import Usine from '../UsineBen/Usine';
-import Usi from '../UsineBen/Usi';
-import Usii from '../UsineBen/Usii';
-import Usiii from '../UsineBen/Usiii';
+import UsineInfos from '../UsineBen/UsineInfos';
+import UsineInfo from '../UsineBen/UsineInfo';
+import Systeme from '../UsineBen/Systeme';
 import Foyer from '../UsineBen/Foyer';
 import Foyer1 from '../UsineBen/Foyer1';
 import Buse from '../UsineBen/Buse';
@@ -30,6 +30,7 @@ import Décapage from '../Propos/Décapage';
 import Defruitage from '../Propos/Defruitage';
 import Transport from '../Propos/Transport';
 import Epierage from '../Propos/Epierage';
+import Sechagedef from '../Sechag/Sechagedef';
 const screens={
   
 
@@ -67,19 +68,20 @@ screen:Historique
     Usine:{
       screen:Usine
     },
+   
     
     News:{
         screen: News
 
     },
-   Usi:{
-     screen: Usi
+   UsineInfos:{
+     screen: UsineInfos
    },
-   Usii:{
-    screen: Usii
+   UsineInfo:{
+    screen: UsineInfo
   },
-  Usiii:{
-    screen: Usiii
+  Systeme:{
+    screen: Systeme
   },
   Foyer:{
     screen: Foyer
@@ -140,7 +142,9 @@ screen:Historique
     ActualiteContent:{
       screen:ActualiteContent,
     },
-   
+    Sechagedef:{
+      screen:Sechagedef
+    },
 
 
 }
