@@ -4,7 +4,7 @@ import { StyleSheet, View, Text,ScrollView,ImageBackground,TouchableHighlight,Bu
 export default function Buse({navigation}) {
   
   const PressHandler = () => {
-    navigation.navigate('Usiii')
+    navigation.navigate('Systeme')
   }
   return (
     <ScrollView>

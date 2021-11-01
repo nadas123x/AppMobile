@@ -4,7 +4,7 @@ import { StyleSheet, View, Text,ScrollView,ImageBackground,TouchableHighlight,Bu
 export default function Cheminee({navigation}) {
     
   const PressHandler = () => {
-    navigation.navigate('Usiii')
+    navigation.navigate('Systeme')
   }
   return (
     <ScrollView>
@@ -54,9 +54,9 @@ phosphate vers le stock du rejet.
 
             •    C’est un cylindre d’une hauteur de 30m qui a pour rôle d’évacuer :   {"\n"}
    {"\n"}
->	    Les gaz de combustion.   {"\n"}
->	    La vapeur d’eau due au séchage.   {"\n"}
->    	Les particules extra-fines non récupérables
+*    Les gaz de combustion.   {"\n"}
+*    La vapeur d’eau due au séchage.   {"\n"}
+*  	Les particules extra-fines non récupérables
    {"\n"}
             </Text>
           

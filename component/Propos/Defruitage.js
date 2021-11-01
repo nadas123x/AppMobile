@@ -20,7 +20,7 @@ export default function Foration( {navigation}){
   
 
   const PressHandler = () => {
-    navigation.navigate('Phooo')
+    navigation.navigate('Extraction')
   }
     return (
       <ScrollView>
@@ -132,6 +132,11 @@ Les couches minces sont aménagées par les bulles puis chargées par des charge
           </View>
         </View>
         </View>
+        <Image
+ source={require('../../assets/defr.jpg')}
+  resizeMode="contain"
+            style={styles.imagee}
+          ></Image>
      </ScrollView>
     );
   }

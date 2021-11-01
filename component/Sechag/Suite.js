@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text,ScrollView,ImageBackground,TouchableHighlight,Button, Image } from "react-native";
 
-export default function Modedetransfert({navigation}) {
+export default function Suite({navigation}) {
     
   const PressHandler = () => {
-    navigation.navigate('Usiii')
+    navigation.navigate('Fin')
   }
   return (
     <ScrollView>
@@ -19,26 +19,19 @@ export default function Modedetransfert({navigation}) {
        
          
           <Text style={styles.description}> 
-         
-<Text style={styles.name}>Par conduction:{"\n"}</Text>
+          <Text style={styles.name}>Modes de transfert:{"\n"}</Text>
 {"\n"}
-{"\n"}
-•   L’énergie thermique nécessaire au séchage est
-apportée non pas par un gaz en mouvement autour
-du produit à sécher, mais par contact direct entre
-le produit et une paroi chauffée. Les vapeurs
-libérées par le séchage sont soit aspirées (séchage
-par ébullition), soit entraînées par un gaz de
-balayage dont le débit est toujours faible en
-comparaison de celui nécessaire à un séchage
-convectif.
+
+2) Par rayonnement:
+
 {"\n"}
 {"\n"}
 
-
-
-       
-          
+-  Ce mode de séchage dépend du rayonnement de la
+flamme produite. Si la flamme est très lumineuse, l’
+énergie rayonnante favorise les faisceaux valorisants
+par contre si elle est peu lumineuse, elle fournit peu
+d’énergie rayonnante.
           {"\n"}
  
 {"\n"}
@@ -48,22 +41,14 @@ convectif.
   
 </Text>
 <Image
- source={require('../../assets/chem.png')}
+ source={require('../../assets/mode2.png')}
   resizeMode="contain"
             style={styles.image}
           ></Image>
-            <Text style={styles.description}>
-  
-              {"\n"}
-
-            •    C’est un cylindre d’une hauteur de 30m qui a pour rôle d’évacuer :   {"\n"}
-   {"\n"}
-   •	    Les gaz de combustion.   {"\n"}
-   •      La vapeur d’eau due au séchage.   {"\n"}
-   •    	Les particules extra-fines non récupérables
-   {"\n"}
-            </Text>
-          
+            
+            <ScrollView>
+              
+            </ScrollView>
 <TouchableHighlight 
                 style ={{
                     height: 60,
@@ -74,7 +59,7 @@ convectif.
                     marginTop :'10%'
                }}>
             <Button
-             title=' exit '
+             title=' -> '
              alignItems='center'
                onPress={PressHandler}
 
@@ -86,6 +71,9 @@ convectif.
       </View>
  
     </ScrollView>
+    
+
+
   );
 }
 
@@ -120,8 +108,8 @@ const styles = StyleSheet.create({
   image: {
     width: 500,
     height: 250,
-    marginLeft: '0%',
-    marginTop:'-15%',
+    marginLeft: '-12%',
+    marginTop:'10%',
     
   },
   description:{

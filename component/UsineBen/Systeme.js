@@ -164,6 +164,7 @@ extra-fines sont dissipées à travers la cheminée par les ventilateurs de tira
                    
                     marginTop :'15%'
                 }}>
+                  
             <Button
              title=' 6'
              alignItems='center'
@@ -172,7 +173,21 @@ extra-fines sont dissipées à travers la cheminée par les ventilateurs de tira
                color="darkgreen"  
               
                        />
-                           }}>
+                           
+         
+                       
+               </TouchableHighlight>
+               <TouchableHighlight 
+                style ={{
+                    height: 30,
+                    width:'20%',
+                    borderRadius:80,
+                    backgroundColor : "darkgreen",
+                    marginLeft :'68%',
+                   
+                    marginTop :'15%'
+                }}>
+                  
             <Button
              title=' EXIT'
              alignItems='center'
@@ -181,6 +196,9 @@ extra-fines sont dissipées à travers la cheminée par les ventilateurs de tira
                color="darkgreen"  
               
                        />
+                           
+         
+                       
                </TouchableHighlight>
         </View>
       </View>

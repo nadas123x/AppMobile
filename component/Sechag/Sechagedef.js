@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text,ScrollView,ImageBackground,TouchableHighlight,Button, Image } from "react-native";
 
-export default function Sechagedef({navigation}) {
+export default function Mode({navigation}) {
     
   const PressHandler = () => {
-    navigation.navigate('Usiii')
+    navigation.navigate('Mode')
   }
   return (
     <ScrollView>
@@ -19,45 +19,34 @@ export default function Sechagedef({navigation}) {
        
          
           <Text style={styles.description}> 
-         
-<Text style={styles.name}>Définition:{"\n"}</Text>
+          <Text style={styles.name}>Définition:{"\n"}</Text>
 {"\n"}
 {"\n"}
-•   Le séchage est une opération unitaire
+
+</Text>
+<Image
+ source={require('../../assets/secha.png')}
+  resizeMode="contain"
+            style={styles.image}
+          ></Image>
+            <Text style={styles.description}>
+  
+              {"\n"}
+
+              Le séchage est une opération unitaire
 largement utilisé dans l'industrie minière,
 souvent en complément d'opérations comme
 la sédimentation, la filtration ou l'essorage.
 
 Il permet la réduction de l'humidité d'un
 solide à une certaine limite.
-Il a pour but  de rendre le minerai
-sec et marchand conformément aux
-exigences des clients.
-
 {"\n"}
 {"\n"}
 NB: Le séchage n'est pas un traitement
 d'enrichissement.
-
-{"\n"}
-{"\n"}
-
-
-
-       
-          
-          {"\n"}
- 
-{"\n"}
-
-
-      
-  
-</Text>
-
-            <Text style={styles.description}>
-  
-           
+Le séchage a pour but de rendre le minerai
+sec et marchand conformément aux
+exigences des clients.
             </Text>
           
 <TouchableHighlight 
@@ -70,7 +59,7 @@ d'enrichissement.
                     marginTop :'10%'
                }}>
             <Button
-             title=' exit '
+             title=' -> '
              alignItems='center'
                onPress={PressHandler}
 
@@ -114,10 +103,10 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
   },
   image: {
-    width: 500,
+    width: 400,
     height: 250,
     marginLeft: '0%',
-    marginTop:'-15%',
+    marginTop:'2%',
     
   },
   description:{

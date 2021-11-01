@@ -31,6 +31,9 @@ import Defruitage from '../Propos/Defruitage';
 import Transport from '../Propos/Transport';
 import Epierage from '../Propos/Epierage';
 import Sechagedef from '../Sechag/Sechagedef';
+import Mode from '../Sechag/Mode';
+import Suite from '../Sechag/Suite';
+import Fin from '../Sechag/Fin';
 const screens={
   
 
@@ -38,7 +41,7 @@ const screens={
     SB:{
         screen: SB,
         navigationOptions: ({ navigation }) => ({
-            title: `terribl`,
+            title: `BACK`,
             headerShown:false,
             
           }),
@@ -47,7 +50,7 @@ const screens={
     Posts:{
         screen: Posts,
         navigationOptions: ({ navigation }) => ({
-            title: `terribl`,
+            title: `BACK`,
             headerShown:false,
             
           }),
@@ -135,7 +138,7 @@ screen:Historique
     Animation:{
         screen:Animation,
         navigationOptions: ({ navigation }) => ({
-            title: `terribl`,
+            title: `BACK`,
             headerShown:false
           }),
     },
@@ -145,7 +148,15 @@ screen:Historique
     Sechagedef:{
       screen:Sechagedef
     },
-
+    Mode:{
+      screen:Mode
+    },
+    Suite:{
+      screen: Suite
+    },
+     Fin:{
+       screen: Fin
+     },
 
 }
 

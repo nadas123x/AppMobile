@@ -37,6 +37,9 @@ export default function Pho( {navigation}){
   const PressHandler6 = () => {
     navigation.navigate('Epierage')
   }
+  const PressHandler7 = () => {
+    navigation.navigate('Posts')
+  }
     return (
       <ScrollView>
         <View style={styles.container}>
@@ -210,6 +213,26 @@ export default function Pho( {navigation}){
 '
              alignItems='center'
                onPress={PressHandler6}
+
+               color="darkgreen"  
+              
+                       />
+               </TouchableHighlight>
+               <TouchableHighlight 
+                style ={{
+                    height:' 20%',
+                    width:'40%',
+                    borderRadius:80,
+                    backgroundColor : "white",
+                    marginLeft :'56%',
+                   
+                    marginTop :'25%'
+                }}>
+            <Button
+             title=' EXIT
+'
+             alignItems='center'
+               onPress={PressHandler7}
 
                color="darkgreen"  
               
