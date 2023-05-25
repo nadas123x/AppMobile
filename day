@@ -1,0 +1,6 @@
+if (LocalDate.now().getDayOfWeek() == DayOfWeek.MONDAY) {
+    JobExecution execution1 = jobLauncher.run(ComissionJob, params);
+    log.info("COMPTA COMMISSIONS: JOB BUILD" + LoanWarrantyConstant.LOG_PREFIX 
+        + execution1.getJobInstance().getJobName() + " ended with STATUS :: " 
+        + execution1.getStatus() + LoanWarrantyConstant.LOG_SUFFIX);
+}
