@@ -60,3 +60,66 @@ public class CompensationClaimReaderTest {
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+@RunWith(MockitoJUnitRunner.class)
+public class CompensationClaimReaderTest {
+
+    @Mock
+    private ResourceAwareItemReaderItemStream<CompensationClaimReadDTO> annexResponseReader;
+
+    @InjectMocks
+    private CompensationClaimReader reader;
+
+    @Before
+    public void setUp() {
+        MockitoAnnotations.initMocks(this);
+    }
+
+    @Test
+    public void testCreateMultiResourceItemReader() throws IOException {
+        // Mock the resources
+        Resource resource1 = mock(Resource.class);
+        InputStream inputStream1 = new ByteArrayInputStream("R12 Test Data".getBytes());
+        when(resource1.getInputStream()).thenReturn(inputStream1);
+        Resource resource2 = mock(Resource.class);
+        InputStream inputStream2 = mock(InputStream.class);
+        when(resource2.getInputStream()).thenThrow(new IOException());
+        Resource[] resources = {resource1, resource2};
+
+        // Inject the resources using reflection
+        Field field = CompensationClaimReader.class.getDeclaredField("resources");
+        field.setAccessible(true);
+        field.set(reader, resources);
+
+        // Call the method under test
+        MultiResourceItemReader<CompensationClaimReadDTO> result = reader.createMultiResourceItemReader(annexResponseReader);
+
+        // Verify the filtered resources
+        Field resourcesField = MultiResourceItemReader.class.getDeclaredField("resources");
+        resourcesField.setAccessible(true);
+        Resource[] filteredResources = (Resource[]) resourcesField.get(result);
+        assertEquals(1, filteredResources.length);
+        assertEquals(resource1, filteredResources[0]);
+
+        // Verify the delegate
+        assertEquals(annexResponseReader, result.getDelegate());
+
+        // Verify the exception handling and printStackTrace() call
+        try {
+            result.open(new ExecutionContext());
+        } catch (IOException e) {
+            // Ensure that e.printStackTrace() is called
+            verify(e).printStackTrace();
+        }
+    }
+}
