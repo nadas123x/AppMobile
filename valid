@@ -1,33 +1,62 @@
-La fonction de validation vérifie que l'identifiant (Id) respecte les critères suivants :
+package ma.cih.novabank.smaloanswarrantyfollowupbatch.reader;
 
-La longueur de l'identifiant doit être supérieure ou égale à 3 caractères.
-Le premier caractère de l'identifiant doit être une lettre de l'alphabet (minuscule ou majuscule).
-Les deuxième et troisième caractères de l'identifiant doivent être des lettres de l'alphabet (minuscules ou majuscules) ou des chiffres.
-Si l'une de ces conditions n'est pas satisfaite, la fonction de validation renverra true, indiquant que l'entrée n'est pas valide. Sinon, elle renverra false, indiquant que l'entrée est valide.
+import ma.cih.novabank.smaloanswarrantyfollowupbatch.dto.CompensationClaimDTO;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.batch.item.file.MultiResourceItemReader;
+import org.springframework.batch.item.file.ResourceAwareItemReaderItemStream;
+import org.springframework.core.io.Resource;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Field;
 
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
+@RunWith(MockitoJUnitRunner.class)
+public class CompensationClaimReaderTest {
 
+    @Mock
+    private ResourceAwareItemReaderItemStream<CompensationClaimDTO> annexResponseReader;
 
-User
-mais quand je saisi: 18FV01034 sa march pas
-ChatGPT
-La validation actuelle n'accepte pas la valeur "18FV01034" car elle ne correspond pas aux critères spécifiés dans la fonction de validation.
+    @InjectMocks
+    private CompensationClaimReader reader;
 
-Selon la fonction de validation actuelle, les deuxième et troisième caractères de l'identifiant doivent être des lettres de l'alphabet (minuscules ou majuscules) ou des chiffres. Cependant, dans la valeur "18FV01034", le deuxième caractère est "8", qui n'est ni une lettre ni un chiffre.
+    @Before
+    public void setUp() {
+        MockitoAnnotations.initMocks(this);
+    }
 
-Si vous souhaitez permettre des chiffres dans la deuxième et la troisième position de l'identifiant, vous pouvez ajuster la fonction de validation en utilisant l'expression régulière suivante :
+    @Test
+    public void testCreateMultiResourceItemReader() throws IOException, NoSuchFieldException, IllegalAccessException {
+        // Mock the resources
+        Resource resource1 = mock(Resource.class);
+        InputStream inputStream1 = new ByteArrayInputStream("R12 Test Data".getBytes());
+        when(resource1.getInputStream()).thenReturn(inputStream1);
+        Resource resource2 = mock(Resource.class);
+        InputStream inputStream2 = new ByteArrayInputStream("Invalid Data".getBytes());
+        when(resource2.getInputStream()).thenReturn(inputStream2);
+        Resource[] resources = {resource1, resource2};
 
-javascript
-Copy code
-/^[a-zA-Z][a-zA-Z0-9]+$/.test(Id)
-Cela vérifiera que le premier caractère est une lettre de l'alphabet, et que les caractères suivants peuvent être des lettres de l'alphabet ou des chiffres.
+        // Inject the resources using reflection
+        Field field = CompensationClaimReader.class.getDeclaredField("resources");
+        field.setAccessible(true);
+        field.set(reader, resources);
 
-Voici comment la fonction de validation mise à jour pourrait ressembler :
+        // Call the method under test
+        MultiResourceItemReader<CompensationClaimDTO> result = reader.createMultiResourceItemReader(annexResponseReader);
 
-javascript
-Copy code
-validate: (Id) => {
-  if (!Id || Id.length < 3) return true;
-  else return /^[a-zA-Z][a-zA-Z0-9]+$/.test(Id);
+        // Verify the filtered resources
+        Field resourcesField = MultiResourceItemReader.class.getDeclaredField("resources");
+        resourcesField.setAccessible(true);
+        Resource[] filteredResources = (Resource[]) resourcesField.get(result);
+
+    }
 }
