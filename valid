@@ -1,125 +1,17 @@
-package ma.cih.novabank.smaloanswarrantyfollowupbatch.reader;
-
-import ma.cih.novabank.smaloanswarrantyfollowupbatch.dto.CompensationClaimDTO;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.batch.item.file.MultiResourceItemReader;
-import org.springframework.batch.item.file.ResourceAwareItemReaderItemStream;
-import org.springframework.core.io.Resource;
-
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.lang.reflect.Field;
-
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-
-@RunWith(MockitoJUnitRunner.class)
-public class CompensationClaimReaderTest {
-
-    @Mock
-    private ResourceAwareItemReaderItemStream<CompensationClaimDTO> annexResponseReader;
-
-    @InjectMocks
-    private CompensationClaimReader reader;
-
-    @Before
-    public void setUp() {
-        MockitoAnnotations.initMocks(this);
-    }
-
-    @Test
-    public void testCreateMultiResourceItemReader() throws IOException, NoSuchFieldException, IllegalAccessException {
-        // Mock the resources
-        Resource resource1 = mock(Resource.class);
-        InputStream inputStream1 = new ByteArrayInputStream("R12 Test Data".getBytes());
-        when(resource1.getInputStream()).thenReturn(inputStream1);
-        Resource resource2 = mock(Resource.class);
-        InputStream inputStream2 = new ByteArrayInputStream("Invalid Data".getBytes());
-        when(resource2.getInputStream()).thenReturn(inputStream2);
-        Resource[] resources = {resource1, resource2};
-
-        // Inject the resources using reflection
-        Field field = CompensationClaimReader.class.getDeclaredField("resources");
-        field.setAccessible(true);
-        field.set(reader, resources);
-
-        // Call the method under test
-        MultiResourceItemReader<CompensationClaimDTO> result = reader.createMultiResourceItemReader(annexResponseReader);
-
-        // Verify the filtered resources
-        Field resourcesField = MultiResourceItemReader.class.getDeclaredField("resources");
-        resourcesField.setAccessible(true);
-        Resource[] filteredResources = (Resource[]) resourcesField.get(result);
-
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-@RunWith(MockitoJUnitRunner.class)
-public class CompensationClaimReaderTest {
-
-    @Mock
-    private ResourceAwareItemReaderItemStream<CompensationClaimReadDTO> annexResponseReader;
-
-    @InjectMocks
-    private CompensationClaimReader reader;
-
-    @Before
-    public void setUp() {
-        MockitoAnnotations.initMocks(this);
-    }
-
-    @Test
-    public void testCreateMultiResourceItemReader() throws IOException {
-        // Mock the resources
-        Resource resource1 = mock(Resource.class);
-        InputStream inputStream1 = new ByteArrayInputStream("R12 Test Data".getBytes());
-        when(resource1.getInputStream()).thenReturn(inputStream1);
-        Resource resource2 = mock(Resource.class);
-        InputStream inputStream2 = mock(InputStream.class);
-        when(resource2.getInputStream()).thenThrow(new IOException());
-        Resource[] resources = {resource1, resource2};
-
-        // Inject the resources using reflection
-        Field field = CompensationClaimReader.class.getDeclaredField("resources");
-        field.setAccessible(true);
-        field.set(reader, resources);
-
-        // Call the method under test
-        MultiResourceItemReader<CompensationClaimReadDTO> result = reader.createMultiResourceItemReader(annexResponseReader);
-
-        // Verify the filtered resources
-        Field resourcesField = MultiResourceItemReader.class.getDeclaredField("resources");
-        resourcesField.setAccessible(true);
-        Resource[] filteredResources = (Resource[]) resourcesField.get(result);
-        assertEquals(1, filteredResources.length);
-        assertEquals(resource1, filteredResources[0]);
-
-        // Verify the delegate
-        assertEquals(annexResponseReader, result.getDelegate());
-
-        // Verify the exception handling and printStackTrace() call
-        try {
-            result.open(new ExecutionContext());
-        } catch (IOException e) {
-            // Ensure that e.printStackTrace() is called
-            verify(e).printStackTrace();
-        }
-    }
-}
+ <input
+                disabled={editMode || isStateExtourne}
+                className='input form-control'
+                name='solde'
+                type='number'
+                ref={register({
+                  required: 'Veuillez compléter ce champ, il est obligatoire.',
+                  validate: {
+                    notZero: (value) => parseFloat(value) !== 0 || 'Le solde doit être différent de zéro.',
+                    validFormat: (value) =>
+                      /^\d+(\.\d{1,2})?$/.test(value) || 'Format du nombre décimal invalide.',
+                    lessThanOrEqual: (value) =>
+                      parseFloat(value) <= parseFloat(warrantyDocument.amount) ||
+                      'Le solde doit être inférieur ou égal au montant initial de la ligne.',
+                  },
+                })}
+              />
